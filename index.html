@@ -21,15 +21,41 @@
     <style>
         .organizer-image {
             width: 100%;
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 3 / 4;
             object-fit: cover;
             display: block;
+            border-radius: 4px;
         }
         .speaker-card, .organizer-card {
+            background: #fff;
+            border: 1px solid #e0e0e6;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
             text-align: center;
+            padding: 0.75em 0.75em 0;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .speaker-card:hover, .organizer-card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.13);
+            transform: translateY(-3px);
+        }
+        .speaker-card .image.fit,
+        .organizer-card .image.fit {
+            margin: 0;
+        }
+        .speaker-card .image.fit a,
+        .organizer-card .image.fit a {
+            display: block;
         }
         .speaker-card h5, .organizer-card h5 {
-            margin-top: 0.5em;
+            padding: 0.6em 0.5em 0.7em;
+            margin: 0;
+        }
+        #speakers .box.alt .row,
+        #organizers .box.alt .row {
+            justify-content: center;
         }
     </style>
 </head>
@@ -134,47 +160,69 @@
 					</header>
 					<div class="box alt">
 						<div class="row gtr-uniform">
-							<div class="col-2 speaker-card">
-								<span class="image fit"><a href="https://www.eugenevinitsky.com"><img class="organizer-image" src="images/Speakers/eugene_vinitsky.jpg" alt="Eugene Vinitsky" /></a></span>
-								<h5><a href="https://www.eugenevinitsky.com"><strong>Eugene Vinitsky</strong></a><br/>New York University</h5>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://www.eugenevinitsky.com"><img class="organizer-image" src="images/Speakers/eugene_vinitsky.jpg" alt="Eugene Vinitsky" /></a></span>
+									<h5><a href="https://www.eugenevinitsky.com"><strong>Eugene Vinitsky</strong></a><br/>New York University</h5>
+								</div>
 							</div>
-							<div class="col-2 speaker-card">
-								<span class="image fit"><a href="https://rl.uni-freiburg.de/people/valada"><img class="organizer-image" src="images/Speakers/abhinav_valada.jpg" alt="Abhinav Valada" /></a></span>
-								<h5><a href="https://rl.uni-freiburg.de/people/valada"><strong>Abhinav Valada</strong></a><br/>University of Freiburg</h5>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://rl.uni-freiburg.de/people/valada"><img class="organizer-image" src="images/Speakers/abhinav_valada.jpg" alt="Abhinav Valada" /></a></span>
+									<h5><a href="https://rl.uni-freiburg.de/people/valada"><strong>Abhinav Valada</strong></a><br/>University of Freiburg</h5>
+								</div>
 							</div>
-							<div class="col-2 speaker-card">
-								<span class="image fit"><a href="https://rowanmcallister.github.io/"><img class="organizer-image" src="images/Speakers/rowan_mcallister.jpg" alt="Rowan McAllister" /></a></span>
-								<h5><a href="https://rowanmcallister.github.io/"><strong>Rowan McAllister</strong></a><br/>Toyota Research</h5>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://rowanmcallister.github.io/"><img class="organizer-image" src="images/Speakers/rowan_mcallister.jpg" alt="Rowan McAllister" /></a></span>
+									<h5><a href="https://rowanmcallister.github.io/"><strong>Rowan McAllister</strong></a><br/>Toyota Research</h5>
+								</div>
 							</div>
-							<div class="col-2 speaker-card">
-								<span class="image fit"><img class="organizer-image" src="images/Speakers/vassia_simaiaki.jpg" alt="Vassia Simaiaki" /></span>
-								<h5><strong>Vassia Simaiaki</strong><br/>Wayve</h5>
-							</div>
-							<div class="col-2 speaker-card">
-								<span class="image fit"><a href="https://www.maximilianigl.com/"><img class="organizer-image" src="images/Speakers/max_igl.jpg" alt="Max Igl" /></a></span>
-								<h5><a href="https://www.maximilianigl.com/"><strong>Max Igl</strong></a><br/>NVIDIA</h5>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><img class="organizer-image" src="images/Speakers/vassia_simaiaki.jpg" alt="Vassia Simaiaki" /></span>
+									<h5><strong>Vassia Simaiaki</strong><br/>Wayve</h5>
+								</div>
 							</div>
 						</div>
 						<div class="row gtr-uniform" style="margin-top: 1.5em;">
-							<div class="col-2 speaker-card">
-								<span class="image fit"><a href="https://kait0.github.io/"><img class="organizer-image" src="images/Speakers/bernhard_jaeger.jpg" alt="Bernhard Jaeger" /></a></span>
-								<h5><a href="https://kait0.github.io/"><strong>Bernhard Jaeger</strong></a><br/>University of Tübingen</h5>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://www.maximilianigl.com/"><img class="organizer-image" src="images/Speakers/max_igl.jpg" alt="Max Igl" /></a></span>
+									<h5><a href="https://www.maximilianigl.com/"><strong>Max Igl</strong></a><br/>NVIDIA</h5>
+								</div>
 							</div>
-							<div class="col-2 speaker-card">
-								<span class="image fit"><a href="https://lihongyang.info/"><img class="organizer-image" src="images/Speakers/hongyang_li.jpg" alt="Hongyang Li" /></a></span>
-								<h5><a href="https://lihongyang.info/"><strong>Hongyang Li</strong></a><br/>University of Hong Kong</h5>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://kait0.github.io/"><img class="organizer-image" src="images/Speakers/bernhard_jaeger.jpg" alt="Bernhard Jaeger" /></a></span>
+									<h5><a href="https://kait0.github.io/"><strong>Bernhard Jaeger</strong></a><br/>University of Tübingen</h5>
+								</div>
 							</div>
-							<div class="col-2 speaker-card">
-								<span class="image fit"><a href="https://github.com/katetolstaya/"><img class="organizer-image" src="images/Speakers/kate_tolstaya.jpg" alt="Kate Tolstaya" /></a></span>
-								<h5><a href="https://github.com/katetolstaya/"><strong>Kate Tolstaya</strong></a><br/>Waymo</h5>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://lihongyang.info/"><img class="organizer-image" src="images/Speakers/hongyang_li.jpg" alt="Hongyang Li" /></a></span>
+									<h5><a href="https://lihongyang.info/"><strong>Hongyang Li</strong></a><br/>University of Hong Kong</h5>
+								</div>
 							</div>
-							<div class="col-2 speaker-card">
-								<span class="image fit"><a href="http://maxjiang.ml/"><img class="organizer-image" src="images/Speakers/max_jiang.jpg" alt="Max Jiang" /></a></span>
-								<h5><a href="http://maxjiang.ml/"><strong>Max Jiang</strong></a><br/>Waymo</h5>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://github.com/katetolstaya/"><img class="organizer-image" src="images/Speakers/kate_tolstaya.jpg" alt="Kate Tolstaya" /></a></span>
+									<h5><a href="https://github.com/katetolstaya/"><strong>Kate Tolstaya</strong></a><br/>Waymo</h5>
+								</div>
 							</div>
-							<div class="col-2 speaker-card">
-								<span class="image fit"><a href="https://sergiocasas.github.io"><img class="organizer-image" src="images/Speakers/sergio_casas.jpg" alt="Sergio Casas" /></a></span>
-								<h5><a href="https://sergiocasas.github.io"><strong>Sergio Casas</strong></a><br/>Waymo</h5>
+						</div>
+						<div class="row gtr-uniform" style="margin-top: 1.5em;">
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="http://maxjiang.ml/"><img class="organizer-image" src="images/Speakers/max_jiang.jpg" alt="Max Jiang" /></a></span>
+									<h5><a href="http://maxjiang.ml/"><strong>Max Jiang</strong></a><br/>Waymo</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://sergiocasas.github.io"><img class="organizer-image" src="images/Speakers/sergio_casas.jpg" alt="Sergio Casas" /></a></span>
+									<h5><a href="https://sergiocasas.github.io"><strong>Sergio Casas</strong></a><br/>Waymo</h5>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -296,35 +344,49 @@
 					</header>
 					<div class="box alt">
 						<div class="row gtr-uniform">
-							<div class="col-2 organizer-card">
-								<span class="image fit"><a href="https://palmieri.github.io/"><img class="organizer-image" src="images/Organizers/palmieri_luigi.png" alt="Luigi Palmieri" /></a></span>
-								<h5><a href="https://palmieri.github.io/"><strong>Luigi Palmieri</strong></a><br/>Robert Bosch GmbH</h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://palmieri.github.io/"><img class="organizer-image" src="images/Organizers/palmieri_luigi.png" alt="Luigi Palmieri" /></a></span>
+									<h5><a href="https://palmieri.github.io/"><strong>Luigi Palmieri</strong></a><br/>Robert Bosch GmbH</h5>
+								</div>
 							</div>
-							<div class="col-2 organizer-card">
-								<span class="image fit"><a href="https://www.borisivanovic.com/"><img class="organizer-image" src="images/Organizers/boris_ivanovic.jpg" alt="Boris Ivanovic" /></a></span>
-								<h5><a href="https://www.borisivanovic.com/"><strong>Boris Ivanovic</strong></a><br/>NVIDIA</h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://www.borisivanovic.com/"><img class="organizer-image" src="images/Organizers/boris_ivanovic.jpg" alt="Boris Ivanovic" /></a></span>
+									<h5><a href="https://www.borisivanovic.com/"><strong>Boris Ivanovic</strong></a><br/>NVIDIA</h5>
+								</div>
 							</div>
-							<div class="col-2 organizer-card">
-								<span class="image fit"><img class="organizer-image" src="images/Organizers/Faris_Janjos_cropped.jpg" alt="Faris Janjos" /></span>
-								<h5><strong>Faris Janjos</strong><br/>Robert Bosch GmbH</h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><img class="organizer-image" src="images/Organizers/Faris_Janjos_cropped.jpg" alt="Faris Janjos" /></span>
+									<h5><strong>Faris Janjos</strong><br/>Robert Bosch GmbH</h5>
+								</div>
 							</div>
-							<div class="col-2 organizer-card">
-								<span class="image fit"><a href="https://look-andreas.github.io/"><img class="organizer-image" src="images/Organizers/look_andreas_cropped.jpg" alt="Andreas Look" /></a></span>
-								<h5><a href="https://look-andreas.github.io/"><strong>Andreas Look</strong></a><br/>Coburg University of Applied Sciences</h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://look-andreas.github.io/"><img class="organizer-image" src="images/Organizers/look_andreas_cropped.jpg" alt="Andreas Look" /></a></span>
+									<h5><a href="https://look-andreas.github.io/"><strong>Andreas Look</strong></a><br/>Coburg University of Applied Sciences</h5>
+								</div>
 							</div>
 						</div>
 						<div class="row gtr-uniform" style="margin-top: 1.5em;">
-							<div class="col-2 organizer-card">
-								<span class="image fit"><a href="https://www.daphne-cornelisse.com/"><img class="organizer-image" src="images/Organizers/daphne_cornelisse.jpg" alt="Daphne Cornelisse" /></a></span>
-								<h5><a href="https://www.daphne-cornelisse.com/"><strong>Daphne Cornelisse</strong></a><br/>New York University</h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://www.daphne-cornelisse.com/"><img class="organizer-image" src="images/Organizers/daphne_cornelisse.jpg" alt="Daphne Cornelisse" /></a></span>
+									<h5><a href="https://www.daphne-cornelisse.com/"><strong>Daphne Cornelisse</strong></a><br/>New York University</h5>
+								</div>
 							</div>
-							<div class="col-2 organizer-card">
-								<span class="image fit"><a href="https://ariostgx.github.io/website/"><img class="organizer-image" src="images/Organizers/shuhan_tan.jpg" alt="Shuhan Tan" /></a></span>
-								<h5><a href="https://ariostgx.github.io/website/"><strong>Shuhan Tan</strong></a><br/>University of Texas at Austin</h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://ariostgx.github.io/website/"><img class="organizer-image" src="images/Organizers/shuhan_tan.jpg" alt="Shuhan Tan" /></a></span>
+									<h5><a href="https://ariostgx.github.io/website/"><strong>Shuhan Tan</strong></a><br/>University of Texas at Austin</h5>
+								</div>
 							</div>
-							<div class="col-2 organizer-card">
-								<span class="image fit"><img class="organizer-image" src="images/Organizers/max_naumann.jpg" alt="Max Naumann" /></span>
-								<h5><strong>Max Naumann</strong><br/>Zoox</h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><img class="organizer-image" src="images/Organizers/max_naumann.jpg" alt="Max Naumann" /></span>
+									<h5><strong>Max Naumann</strong><br/>Zoox</h5>
+								</div>
 							</div>
 						</div>
 					</div>
