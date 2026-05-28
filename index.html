@@ -93,17 +93,28 @@
 							<h2>Abstract</h2>
 						</header>
 						<p>
-						The realization of robust and generalizable autonomous driving (AD) systems necessitates intelligent, human-like, and demonstrably safe decision-making behavior.
-						Traditional methods, facing limitations in complex and novel scenarios, have been supplanted by modern end-to-end systems powered by imitation from vast amounts of expert data.
-						Recent research however, highlights the surprising effectiveness of (self-play) reinforcement learning (RL), either in isolation or synergy with imitation learning (IL).
-						This approach enables discovery of diverse skills and robust performance in out-of-distribution settings without relying purely on data and imitation of the expert as in conventional end-to-end systems.
-						Furthermore, generative world models and Vision-Language-Action (VLA) models are revolutionizing the creation of closed-loop simulation environments by allowing for controllable and realistic scenario generation.
-						These advancements, coupled with scalable, GPU-accelerated multi-agent training, facilitate efficient sim-to-real transfer, paving the way for safer and more capable autonomous vehicles.
-						This workshop brings key researchers together to highlight and discuss these critical developments, with the goal of challenging assumptions and advancing understanding toward the mission of achieving robust autonomy. </p>
-						</p>
+						Robust and generalizable <strong>autonomous driving (AD)</strong> demands intelligent, human-like, and <strong>safe decision-making</strong>.
+						While modern <strong>end-to-end systems</strong> rely on <strong>imitation learning (IL)</strong> from vast expert data,
+						recent work shows the power of <strong>(self-play) reinforcement learning (RL)</strong>&mdash;alone or combined with IL&mdash;to discover diverse skills and achieve <strong>robust out-of-distribution performance</strong>.
+						Meanwhile, <strong>generative world models</strong> and <strong>Vision-Language-Action (VLA) models</strong> enable controllable, realistic <strong>closed-loop simulation</strong>,
+						which together with <strong>GPU-accelerated multi-agent training</strong> facilitates efficient <strong>sim-to-real transfer</strong>.
+						This workshop brings together key researchers to discuss these developments and challenge assumptions on the path toward <strong>robust autonomy</strong>.</p>
 					</div>
 					<span class="image"><img src="images/autonomous_car.png" alt="" /></span>
 				</div>
+				<p style="margin-bottom: 0.5em"><strong>Topics of Interest:</strong></p>
+				<ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6em; list-style: none; padding: 0; margin: 0;">
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Self-Play &amp; Multi-Agent RL for Driving</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Imitation Learning, Offline RL &amp; Online Fine-Tuning</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Emergent Skills &amp; Human-Like Behaviors</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Vision-Language-Action Models for Driving</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Generative World Models &amp; Controllable Simulation</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">RL for Behavior &amp; RL for Reasoning</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Grounding Self-Play Policies with Real-World Data</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Failure Modes, Robustness &amp; Deployment Limitations</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">VLA Integration with Fast Simulators</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Large Models in Real-Time Simulation</li>
+				</ul>
 			</section>
 			<section id="call_for_papers" class="main">
 				<div class="content">
@@ -111,8 +122,8 @@
 						<h2>Call for Papers</h2>
 					</header>
 					<p>
-						We welcome paper submissions on novel and interesting approaches in the field of emerging behaviors for robust autonomy, 
-						ranging from self-play RL and imitation learning to generative world models and VLA-based simulation. 
+						We welcome paper submissions on novel and interesting approaches in the field of emerging behaviors for robust autonomy,
+						ranging from self-play RL and imitation learning to generative world models and VLA-based simulation.
 						All papers will be carefully peer-reviewed based on their originality,
 						relevance to the workshop topics, contributions, and technical clarity to ensure the high
 						quality of the presented content. Accepted papers will be presented as posters. The poster
@@ -120,36 +131,22 @@
 						to pitch their work in a 2-minute presentation. Every paper has to be covered in-person by one
 						of the authors. Additionally, two selected PhD student papers will be given a 15-minute oral presentation during the main program.
 					</p>
-					<p style="margin-bottom: 0px"><strong>Topics of Interest:</strong></p>
-					<ul>
-						<li>Advances in Self-Play and Multi-Agent Reinforcement Learning for driving.</li>
-						<li>Synergies between Imitation Learning, Offline RL, and online fine-tuning for behavior generation.</li>
-						<li>Methods for discovering emergent skills and complex, human-like behaviors without dense reward engineering.</li>
-						<li>Vision-Language-Action models and RL for end-to-end, vision-centric driving policies.</li>
-						<li>GPU-enabled simulation of traffic agents. Generative world models for creating diverse and controllable scenarios.</li>
-						<li>The intersection of RL for behavior and RL for reasoning.</li>
-						<li>Techniques for grounding self-play policies with real-world data and ensuring physical plausibility.</li>
-						<li>Analysis of failure modes, robustness, and current limitations of learned policies when deployed.</li>
-						<li>Integration of VLAs with fast simulators.</li>
-						<li>Challenges and solutions for integrating large models with real-time simulators.</li>
-					</ul>
 					<!--
 					<p style="margin-bottom: 0px"><strong>Awards:</strong></p>
 					<p>
 						The program committee will honor the best paper among all accepted papers with a best paper award.
 					</p>
 					-->
-					<p style="margin-bottom: 0px"><strong>Important Dates:</strong></p>
-					<ul>
-						<li>Deadline for Paper submissions: TBA, 2026</li>
-						<li>Notification of acceptance: TBA, 2026</li>
+					<p style="margin-bottom: 0.5em"><strong>Important Dates:</strong></p>
+					<ul style="display: grid; grid-template-columns: 1fr; gap: 0.6em; list-style: none; padding: 0; margin: 0 0 1em;">
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Deadline for Paper submissions: TBA, 2026</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Notification of acceptance: TBA, 2026</li>
 					</ul>
-					<p style="margin-bottom: 0px"><strong>Submission Instructions:</strong></p>
-					<ul>
-						<li>Papers must not exceed TBA pages (excluding references and appendices)</li>
-						<li>Please refer to the main conference’s format guidelines and template for detailed
-							instructions</li>
-						<li>Submissions are handled via CMT. You can submit your paper here: TBA</li>
+					<p style="margin-bottom: 0.5em"><strong>Submission Instructions:</strong></p>
+					<ul style="display: grid; grid-template-columns: 1fr; gap: 0.6em; list-style: none; padding: 0; margin: 0;">
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Papers must not exceed TBA pages (excluding references and appendices)</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Please refer to the main conference's format guidelines and template for detailed instructions</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Submissions are handled via CMT. You can submit your paper here: TBA</li>
 					</ul>
 				</div>
 			</section>
