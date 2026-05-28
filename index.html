@@ -20,10 +20,42 @@
 	<link rel="manifest" href="/site.webmanifest" <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <style>
         .organizer-image {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            aspect-ratio: 3 / 4;
             object-fit: cover;
-            border-radius: 50%; /* Optional: makes images circular */
+            display: block;
+            border-radius: 4px;
+        }
+        .speaker-card, .organizer-card {
+            background: #fff;
+            border: 1px solid #e0e0e6;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+            text-align: center;
+            padding: 0.75em 0.75em 0;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .speaker-card:hover, .organizer-card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.13);
+            transform: translateY(-3px);
+        }
+        .speaker-card .image.fit,
+        .organizer-card .image.fit {
+            margin: 0;
+        }
+        .speaker-card .image.fit a,
+        .organizer-card .image.fit a {
+            display: block;
+        }
+        .speaker-card h5, .organizer-card h5 {
+            padding: 0.6em 0.5em 0.7em;
+            margin: 0;
+        }
+        #speakers .box.alt .row,
+        #organizers .box.alt .row {
+            justify-content: center;
         }
     </style>
 </head>
@@ -36,7 +68,7 @@
 		<!-- Header -->
 		<header id="header" class="alt">
 			<h1>ECCV 2026 Workshop <br /> <strong>Emerging Behaviors for Achieving Robust Autonomy</strong></h1>
-			<p>TBA September 2026, Room TBA<br>Malmö, Sweden</br></p>
+			<p>8-9 September 2026<br>Malmö, Sweden</br></p>
 		</header>
 
 		<!-- Nav -->
@@ -44,6 +76,7 @@
 			<ul>
 				<li><a href="#intro" class="active">About the workshop</a></li>
 				<li><a href="#call_for_papers" class="active">Call for papers</a></li>
+				<li><a href="#speakers" class="active">Speakers</a></li>
 				<li><a href="#program" class="active">Program</a></li>
 				<li><a href="#organizers">Organizers</a></li>
 			</ul>
@@ -56,73 +89,189 @@
 			<section id="intro" class="main">
 				<div class="spotlight">
 					<div class="content">
-						<header class="major">
+						<header class="major special">
 							<h2>Abstract</h2>
 						</header>
 						<p>
-						The realization of robust and generalizable autonomous driving (AD) systems necessitates intelligent, human-like, and demonstrably safe decision-making behavior.
-						Traditional methods, facing limitations in complex and novel scenarios, have been supplanted by modern end-to-end systems powered by imitation from vast amounts of expert data.
-						Recent research however, highlights the surprising effectiveness of (self-play) reinforcement learning (RL), either in isolation or synergy with imitation learning (IL).
-						This approach enables discovery of diverse skills and robust performance in out-of-distribution settings without relying purely on data and imitation of the expert as in conventional end-to-end systems.
-						Furthermore, generative world models and Vision-Language-Action (VLA) models are revolutionizing the creation of closed-loop simulation environments by allowing for controllable and realistic scenario generation.
-						These advancements, coupled with scalable, GPU-accelerated multi-agent training, facilitate efficient sim-to-real transfer, paving the way for safer and more capable autonomous vehicles.
-						This workshop brings key researchers together to highlight and discuss these critical developments, with the goal of challenging assumptions and advancing understanding toward the mission of achieving robust autonomy. </p>
-						</p>
+						Robust and generalizable <strong>autonomous driving (AD)</strong> demands intelligent, human-like, and <strong>safe decision-making</strong>.
+						While modern <strong>end-to-end systems</strong> rely on <strong>imitation learning (IL)</strong> from vast expert data,
+						recent work shows the power of <strong>(self-play) reinforcement learning (RL)</strong>&mdash;alone or combined with IL&mdash;to discover diverse skills and achieve <strong>robust out-of-distribution performance</strong>.
+						Meanwhile, <strong>generative world models</strong> and <strong>Vision-Language-Action (VLA) models</strong> enable controllable, realistic <strong>closed-loop simulation</strong>,
+						which together with <strong>GPU-accelerated multi-agent training</strong> facilitates efficient <strong>sim-to-real transfer</strong>.
+						This workshop brings together key researchers to discuss these developments and challenge assumptions on the path toward <strong>robust autonomy</strong>.</p>
 					</div>
 					<span class="image"><img src="images/autonomous_car.png" alt="" /></span>
 				</div>
+				<p style="margin-bottom: 0.5em"><strong>Topics of Interest:</strong></p>
+				<ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6em; list-style: none; padding: 0; margin: 0;">
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Self-Play &amp; Multi-Agent RL for Driving</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Imitation Learning, Offline RL &amp; Online Fine-Tuning</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Emergent Skills &amp; Human-Like Behaviors</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Vision-Language-Action Models for Driving</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Generative World Models &amp; Controllable Simulation</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">RL for Behavior &amp; RL for Reasoning</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Grounding Self-Play Policies with Real-World Data</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Failure Modes, Robustness &amp; Deployment Limitations</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">VLA Integration with Fast Simulators</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Large Models in Real-Time Simulation</li>
+				</ul>
 			</section>
 			<section id="call_for_papers" class="main">
-				<div class="content">
-					<header class="major">
-						<h2>Call for Papers</h2>
+			<div class="content">
+                    <header class="major special">
+                        <h2>Call for Papers</h2>
+                    </header>
+                    <p>
+                        We invite original research contributions on emerging behaviors for robust autonomy,
+                        spanning self-play RL and imitation learning to generative world models and VLA-based simulation,
+                        and aligned with any of the workshop's topics of interest. We accept both <strong>full-length papers
+                        (archival), limited to 14 pages</strong> (excluding references), and <strong>short papers (non-archival),
+                        limited to 7 pages</strong> (excluding references). The submitted works should follow the
+                        <a href="https://eccv.ecva.net/Conferences/2026/SubmissionPolicies">official ECCV'26 guidelines</a>.
+                        Submissions are evaluated on their <strong>novelty</strong>, <strong>relevance to the workshop
+                        topics</strong>, technical clarity, and overall <strong>significance</strong>. Accepted full-length
+                        papers will be included in the ECCV workshop proceedings.
+                    </p>		
+                    <p>
+                        Accepted papers will be presented as posters, with the session opening with a round of
+                        spotlight talks where each author may pitch their work in a 2-minute presentation. Every paper
+                        must be presented in person by one of its authors. In addition, two selected PhD student papers
+                        will be given a 15-minute oral presentation during the main program.
+                    </p>
+                    <p style="margin-bottom: 0.5em"><strong>Submission Details:</strong></p>
+                    <ul style="display: grid; grid-template-columns: 1fr; gap: 0.6em; list-style: none; padding: 0; margin: 0 0 1em;">
+                        <li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;"><strong>Submission portal:</strong> <a href="https://openreview.net/group?id=thecvf.com/ECCV/2026/Workshop">OpenReview</a></li>
+                        <li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;"><strong>Submission opens:</strong> TBA, 2026</li>
+                        <li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;"><strong>Submission deadline:</strong> TBA, 2026</li>
+                        <li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;"><strong>Notification of acceptance:</strong> TBA, 2026</li>
+                        <li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;"><strong>Camera-ready deadline:</strong> TBA, 2026</li>
+                    </ul>
+                </div>	
+			</section>
+			<section id="speakers" class="main style1">
+				<div class="container">
+					<header class="major special">
+						<h2>Invited Speakers</h2>
 					</header>
-					<p>
-						We welcome paper submissions on novel and interesting approaches in the field of emerging behaviors for robust autonomy, 
-						ranging from self-play RL and imitation learning to generative world models and VLA-based simulation. 
-						All papers will be carefully peer-reviewed based on their originality,
-						relevance to the workshop topics, contributions, and technical clarity to ensure the high
-						quality of the presented content. Accepted papers will be presented as posters. The poster
-						session will start with a round of spotlight talks, where each author is given the opportunity
-						to pitch their work in a 2-minute presentation. Every paper has to be covered in-person by one
-						of the authors. Additionally, two selected PhD student papers will be given a 15-minute oral presentation during the main program.
-					</p>
-					<p style="margin-bottom: 0px"><strong>Topics of Interest:</strong></p>
-					<ul>
-						<li>Advances in Self-Play and Multi-Agent Reinforcement Learning for driving.</li>
-						<li>Synergies between Imitation Learning, Offline RL, and online fine-tuning for behavior generation.</li>
-						<li>Methods for discovering emergent skills and complex, human-like behaviors without dense reward engineering.</li>
-						<li>Vision-Language-Action models and RL for end-to-end, vision-centric driving policies.</li>
-						<li>GPU-enabled simulation of traffic agents. Generative world models for creating diverse and controllable scenarios.</li>
-						<li>The intersection of RL for behavior and RL for reasoning.</li>
-						<li>Techniques for grounding self-play policies with real-world data and ensuring physical plausibility.</li>
-						<li>Analysis of failure modes, robustness, and current limitations of learned policies when deployed.</li>
-						<li>Integration of VLAs with fast simulators.</li>
-						<li>Challenges and solutions for integrating large models with real-time simulators.</li>
-					</ul>
-					<!--
-					<p style="margin-bottom: 0px"><strong>Awards:</strong></p>
-					<p>
-						The program committee will honor the best paper among all accepted papers with a best paper award.
-					</p>
-					-->
-					<p style="margin-bottom: 0px"><strong>Important Dates:</strong></p>
-					<ul>
-						<li>Deadline for Paper submissions: TBA, 2026</li>
-						<li>Notification of acceptance: TBA, 2026</li>
-					</ul>
-					<p style="margin-bottom: 0px"><strong>Submission Instructions:</strong></p>
-					<ul>
-						<li>Papers must not exceed TBA pages (excluding references and appendices)</li>
-						<li>Please refer to the main conference’s format guidelines and template for detailed
-							instructions</li>
-						<li>Submissions are handled via CMT. You can submit your paper here: TBA</li>
-					</ul>
+					<div class="box alt">
+						<div class="row gtr-uniform" style="margin-top: 1.5em;">
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><img class="organizer-image" src="images/Speakers/vassia_simaiaki.jpg" alt="Vassia Simaiaki" /></span>
+									<h5><strong>Vassia Simaiaki</strong><br/>Wayve</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://www.maximilianigl.com/"><img class="organizer-image" src="images/Speakers/max_igl.jpg" alt="Max Igl" /></a></span>
+									<h5><a href="https://www.maximilianigl.com/"><strong>Max Igl</strong></a><br/>NVIDIA</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://kait0.github.io/"><img class="organizer-image" src="images/Speakers/bernhard_jaeger.jpg" alt="Bernhard Jaeger" /></a></span>
+									<h5><a href="https://kait0.github.io/"><strong>Bernhard Jaeger</strong></a><br/>University of Tübingen</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://sergiocasas.github.io"><img class="organizer-image" src="images/Speakers/sergio_casas.jpg" alt="Sergio Casas" /></a></span>
+									<h5><a href="https://sergiocasas.github.io"><strong>Sergio Casas</strong></a><br/>Waymo</h5>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
+			<!--
+			<section id="speakers" class="main style1">
+				<div class="container">
+					<header class="major special">
+						<h2>Invited Speakers</h2>
+					</header>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://www.eugenevinitsky.com"><img class="organizer-image" src="images/Speakers/eugene_vinitsky.jpg" alt="Eugene Vinitsky" /></a></span>
+									<h5><a href="https://www.eugenevinitsky.com"><strong>Eugene Vinitsky</strong></a><br/>New York University</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://rl.uni-freiburg.de/people/valada"><img class="organizer-image" src="images/Speakers/abhinav_valada.jpg" alt="Abhinav Valada" /></a></span>
+									<h5><a href="https://rl.uni-freiburg.de/people/valada"><strong>Abhinav Valada</strong></a><br/>University of Freiburg</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://rowanmcallister.github.io/"><img class="organizer-image" src="images/Speakers/rowan_mcallister.jpg" alt="Rowan McAllister" /></a></span>
+									<h5><a href="https://rowanmcallister.github.io/"><strong>Rowan McAllister</strong></a><br/>Toyota Research</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><img class="organizer-image" src="images/Speakers/vassia_simaiaki.jpg" alt="Vassia Simaiaki" /></span>
+									<h5><strong>Vassia Simaiaki</strong><br/>Wayve</h5>
+								</div>
+							</div>
+						</div>
+						<div class="row gtr-uniform" style="margin-top: 1.5em;">
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://www.maximilianigl.com/"><img class="organizer-image" src="images/Speakers/max_igl.jpg" alt="Max Igl" /></a></span>
+									<h5><a href="https://www.maximilianigl.com/"><strong>Max Igl</strong></a><br/>NVIDIA</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://kait0.github.io/"><img class="organizer-image" src="images/Speakers/bernhard_jaeger.jpg" alt="Bernhard Jaeger" /></a></span>
+									<h5><a href="https://kait0.github.io/"><strong>Bernhard Jaeger</strong></a><br/>University of Tübingen</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://lihongyang.info/"><img class="organizer-image" src="images/Speakers/hongyang_li.jpg" alt="Hongyang Li" /></a></span>
+									<h5><a href="https://lihongyang.info/"><strong>Hongyang Li</strong></a><br/>University of Hong Kong</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://github.com/katetolstaya/"><img class="organizer-image" src="images/Speakers/kate_tolstaya.jpg" alt="Kate Tolstaya" /></a></span>
+									<h5><a href="https://github.com/katetolstaya/"><strong>Kate Tolstaya</strong></a><br/>Waymo</h5>
+								</div>
+							</div>
+						</div>
+						<div class="row gtr-uniform" style="margin-top: 1.5em;">
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="http://maxjiang.ml/"><img class="organizer-image" src="images/Speakers/max_jiang.jpg" alt="Max Jiang" /></a></span>
+									<h5><a href="http://maxjiang.ml/"><strong>Max Jiang</strong></a><br/>Waymo</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://sergiocasas.github.io"><img class="organizer-image" src="images/Speakers/sergio_casas.jpg" alt="Sergio Casas" /></a></span>
+									<h5><a href="https://sergiocasas.github.io"><strong>Sergio Casas</strong></a><br/>Waymo</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			-->
 			<section id="program" class="main style1">
 				<div class="container">
-					<header class="major">
+					<header class="major special">
+						<h2>Program</h2>
+					</header>
+					<p>The detailed program will be announced closer to the workshop date. Please check later.</p>
+				</div>
+			</section>
+			<!--
+			<section id="program" class="main style1">
+				<div class="container">
+					<header class="major special">
 						<h2>Tentative program</h2>
 					</header>
 					<div class="table-wrapper">
@@ -228,6 +377,7 @@
 
 
 				</div>
+			-->
 			</section>
 			<section id="organizers" class="main style1">
 				<div class="container">
@@ -236,46 +386,49 @@
 					</header>
 					<div class="box alt">
 						<div class="row gtr-uniform">
-							<div class="col-2">
-								<span class="image fit"><img class="organizer-image" src="images/Organizers/palmieri_luigi.png"
-										alt="" /></span>
-								<h5> <a href="https://palmieri.github.io/"><strong>Luigi Palmieri</strong>,</br>
-										Robert Bosch
-										GmbH</a></h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://palmieri.github.io/"><img class="organizer-image" src="images/Organizers/palmieri_luigi.png" alt="Luigi Palmieri" /></a></span>
+									<h5><a href="https://palmieri.github.io/"><strong>Luigi Palmieri</strong></a><br/>Robert Bosch GmbH</h5>
+								</div>
 							</div>
-							<div class="col-2">
-								<span class="image fit"><img class="organizer-image" src="images/Organizers/boris_ivanovic.jpg"
-										alt="" /></span>
-								<h5><a href="https://www.borisivanovic.com/"><strong>Boris Ivanovic</strong>,</br>NVIDIA</a></h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://www.borisivanovic.com/"><img class="organizer-image" src="images/Organizers/boris_ivanovic.jpg" alt="Boris Ivanovic" /></a></span>
+									<h5><a href="https://www.borisivanovic.com/"><strong>Boris Ivanovic</strong></a><br/>NVIDIA</h5>
+								</div>
 							</div>
-							<div class="col-2">
-								<span class="image fit"><img class="organizer-image" src="images/Organizers/Faris_Janjos_cropped.jpg"
-										alt="" /></span>
-								<h5> <a href="#"><strong>Faris Janjos</strong>,</br>Robert Bosch
-										GmbH</a></h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><img class="organizer-image" src="images/Organizers/Faris_Janjos_cropped.jpg" alt="Faris Janjos" /></span>
+									<h5><strong>Faris Janjos</strong><br/>Robert Bosch GmbH</h5>
+								</div>
 							</div>
-							<div class="col-2">
-								<span class="image fit"><img class="organizer-image" src="images/Organizers/look_andreas_cropped.jpg"
-										alt="" /></span>
-								<h5> <a href="#"><strong>Andreas Look</strong>,</br>Coburg University of Applied Sciences</a></h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://look-andreas.github.io/"><img class="organizer-image" src="images/Organizers/look_andreas_cropped.jpg" alt="Andreas Look" /></a></span>
+									<h5><a href="https://look-andreas.github.io/"><strong>Andreas Look</strong></a><br/>Coburg University of Applied Sciences</h5>
+								</div>
 							</div>
 						</div>
 						<div class="row gtr-uniform" style="margin-top: 1.5em;">
-							<div class="col-2">
-								<span class="image fit"><img class="organizer-image" src="images/Organizers/daphne_cornelisse.jpg"
-										alt="" /></span>
-								<h5> <a
-										href="https://www.daphne-cornelisse.com/">
-										<strong>Daphne Cornelisse</strong>,</br> New York University</a></h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://www.daphne-cornelisse.com/"><img class="organizer-image" src="images/Organizers/daphne_cornelisse.jpg" alt="Daphne Cornelisse" /></a></span>
+									<h5><a href="https://www.daphne-cornelisse.com/"><strong>Daphne Cornelisse</strong></a><br/>New York University</h5>
+								</div>
 							</div>
-							<div class="col-2">
-								<span class="image fit"><img class="organizer-image" src="images/Organizers/shuhan_tan.jpg" alt="" /></span>
-								<h5> <a href="https://ariostgx.github.io/website/"><strong>Shuhan Tan</strong>,</br>University of Texas at Austin</a></h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://ariostgx.github.io/website/"><img class="organizer-image" src="images/Organizers/shuhan_tan.jpg" alt="Shuhan Tan" /></a></span>
+									<h5><a href="https://ariostgx.github.io/website/"><strong>Shuhan Tan</strong></a><br/>University of Texas at Austin</h5>
+								</div>
 							</div>
-							<div class="col-2">
-								<span class="image fit"><img class="organizer-image" src="images/Organizers/max_naumann.jpg"
-										alt="" /></span>
-								<h5> <a href="#"><strong>Max Naumann</strong>,</br>Zoox</a></h5>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><img class="organizer-image" src="images/Organizers/max_naumann.jpg" alt="Max Naumann" /></span>
+									<h5><strong>Max Naumann</strong><br/>Zoox</h5>
+								</div>
 							</div>
 						</div>
 					</div>
