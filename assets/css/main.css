@@ -3101,6 +3101,9 @@ input, select, textarea {
 /* Header */
 
 	#header {
+		background-image: linear-gradient(rgba(26, 37, 47, 0.5), rgba(26, 37, 47, 0.5)), url('../../images/banner.jpg');
+		background-position: center;
+		background-size: cover;
 		padding: 5em 5em 1em 5em ;
 		text-align: center;
 	}
@@ -3224,17 +3227,6 @@ input, select, textarea {
 					padding: 3.5em 1em 0.5em 1em ;
 				}
 
-		}
-
-		body.is-preload #header.alt > * {
-			opacity: 0;
-		}
-
-		body.is-preload #header.alt .logo {
-			-moz-transform: scale(0.8) rotate(-30deg);
-			-webkit-transform: scale(0.8) rotate(-30deg);
-			-ms-transform: scale(0.8) rotate(-30deg);
-			transform: scale(0.8) rotate(-30deg);
 		}
 
 /* Nav */
@@ -3363,7 +3355,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
+		background-color: #e6edf5;
 		color: #636363;
 		border-radius: 0.25em;
 	}

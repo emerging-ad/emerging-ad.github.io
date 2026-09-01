@@ -57,6 +57,11 @@
         #organizers .box.alt .row {
             justify-content: center;
         }
+		#header.alt .logo.eccv-logo img {
+			width: min(13rem, 60vw);
+			max-width: 100%;
+			filter: brightness(0) invert(1);
+		}
     </style>
 </head>
 
@@ -67,8 +72,9 @@
 
 		<!-- Header -->
 		<header id="header" class="alt">
-			<h1>ECCV 2026 Full-Day Workshop <br /> <strong>Emerging Behaviors for Achieving Robust Autonomy</strong></h1>
-			<p>Tuesday 8 September 2026<br>Malmö, Sweden</br>Malmö Arena and Malmömässan</p>
+			<span class="logo eccv-logo"><img src="images/eccv-navbar-logo.svg" alt="ECCV 2026" /></span>
+			<h1>ECCV 2026 Workshop <br /> <strong>Emerging Behaviors for Achieving Robust Autonomy</strong></h1>
+			<p>Tuesday 8 September 2026 Full Day<br>Room: Malmömässan E2<br>Malmö, Sweden</p>
 		</header>
 
 		<!-- Nav -->
@@ -89,6 +95,9 @@
 			<section id="intro" class="main">
 				<div class="spotlight">
 					<div class="content">
+						<header class="major special">
+							<h2>Abstract</h2>
+						</header>
 						<p>
 						Robust and generalizable <strong>autonomous driving (AD)</strong> demands intelligent, human-like, and <strong>safe decision-making</strong>.
 						While modern <strong>end-to-end systems</strong> rely on <strong>imitation learning (IL)</strong> from vast expert data,
@@ -200,7 +209,7 @@
 								<tr onClick='toggleRow(this)'>
 									<td>09:15 - 09:45</br>
 									<td><strong><a href="https://www.eugenevinitsky.com">Eugene Vinitsky</a></strong>, New York University</td>
-									<td>TBA
+									<td>What's the point of human data?
 									</td>
 									<td class='expanded-row-content hide-row'>TBA</td>
 								</tr>
@@ -243,7 +252,7 @@
 								<tr onClick='toggleRow(this)'>
 									<td>13:30 - 14:00</br>
 									<td><strong><a href="https://kait0.github.io/">Bernhard Jaeger</a></strong>, KE:SAI</td>
-									<td>TBA</td>
+									<td>How End-to-End Driving Abandoned Behavior Learning, and How to Get It Back</td>
 									<td class='expanded-row-content hide-row'>TBA</td>
 								</tr>
 								<tr onClick='toggleRow(this)'>
