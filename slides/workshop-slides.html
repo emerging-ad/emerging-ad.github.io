@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>EmergingAD Workshop Deck</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css" id="theme" />
+    <style>
+      :root {
+        --text: #1f2937;
+        --muted: #4b5563;
+        --accent: #2d5890;
+        --card-bg: #f8fafc;
+        --deck-bg-url: url("../images/banner.jpg");
+      }
+
+      .reveal {
+        color: var(--text);
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+          var(--deck-bg-url);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .slides.fallback-mode > section {
+        display: none;
+      }
+
+      .slides.fallback-mode > section.fallback-active {
+        display: block;
+      }
+
+      .fallback-hint {
+        position: fixed;
+        right: 14px;
+        bottom: 10px;
+        background: rgba(0, 0, 0, 0.68);
+        color: #fff;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        z-index: 9999;
+        display: none;
+      }
+
+      .reveal h1,
+      .reveal h2,
+      .reveal h3 {
+        text-transform: none;
+      }
+
+      .title-slide h1 {
+        margin: 0 auto;
+        max-width: 980px;
+        font-size: clamp(2.6rem, 7vw, 5.6rem);
+        line-height: 1.05;
+      }
+
+      .title-slide .title-prefix {
+        display: block;
+        font-size: 0.56em;
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+      }
+
+      .subtitle {
+        color: var(--muted);
+        margin-top: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .meta {
+        color: var(--muted);
+        margin-top: 0.75rem;
+        font-size: 1rem;
+      }
+
+      .why-intro {
+        max-width: 1040px;
+        margin: 1rem auto 0;
+      }
+
+      .why-intro-lead {
+        margin: 0 auto 2rem;
+        max-width: 900px;
+        font-size: 1.18rem;
+        line-height: 1.35;
+      }
+
+      .why-focus {
+        margin: 0 auto 0.5rem;
+        color: var(--accent);
+        font-size: 1.45rem;
+        font-weight: 700;
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .why-topic {
+        background: rgba(255, 255, 255, 0.88);
+        border-top: 4px solid var(--accent);
+        padding: 0.9rem;
+        text-align: left;
+      }
+
+      .why-topic h3 {
+        margin: 0 0 0.45rem;
+        color: var(--accent);
+        font-size: 0.9rem;
+      }
+
+      .why-topic p {
+        margin: 0;
+        font-size: 0.7rem;
+        line-height: 1.35;
+      }
+
+      .committee-grid {
+        max-width: 1100px;
+        margin: 1.2rem auto 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.45rem 1.5rem;
+        text-align: left;
+      }
+
+      .committee-member {
+        padding: 0.4rem 0;
+        border-bottom: 1px solid #d1d5db;
+      }
+
+      .committee-name {
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+
+      .committee-affiliation {
+        margin-top: 0.12rem;
+        color: var(--muted);
+        font-size: 0.56rem;
+      }
+
+      .committee-member {
+        font-size: 0.75rem;
+      }
+
+      .people-grid {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 0.75rem;
+      }
+
+      #speakers-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .organizers-row {
+        margin-top: 0.75rem;
+        justify-content: center;
+      }
+
+      .organizers-row-5 {
+        grid-template-columns: repeat(5, 180px);
+      }
+
+      .organizers-row-4 {
+        grid-template-columns: repeat(4, 180px);
+      }
+
+      .organizers-row-3 {
+        grid-template-columns: repeat(3, 180px);
+      }
+
+      .organizers-row-2 {
+        grid-template-columns: repeat(2, 180px);
+      }
+
+      .person-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 210px;
+      }
+
+      .person-card.compact {
+        min-height: 194px;
+        padding: 0.55rem;
+      }
+
+      .person-card img {
+        width: 112px;
+        height: 112px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #dbeafe;
+      }
+
+      .person-card.compact img {
+        width: 112px;
+        height: 112px;
+      }
+
+      .person-name {
+        margin-top: 0.55rem;
+        font-size: 0.92rem;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.2;
+      }
+
+      .person-affiliation {
+        margin-top: 0.3rem;
+        font-size: 0.72rem;
+        color: var(--muted);
+        text-align: center;
+        line-height: 1.2;
+      }
+
+      .person-card.compact .person-name {
+        margin-top: 0.35rem;
+        font-size: 0.8rem;
+      }
+
+      .person-card.compact .person-affiliation {
+        margin-top: 0.2rem;
+        font-size: 0.62rem;
+      }
+
+      .section-subtitle {
+        margin-top: 0.9rem;
+        color: var(--accent);
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .agenda-list {
+        margin: 1.1rem auto 0;
+        text-align: left;
+        max-width: 980px;
+        font-size: 0.9rem;
+        background: rgba(255, 255, 255, 0.96);
+        border-radius: 14px;
+        padding: 0.8rem 1rem;
+        box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+      }
+
+      .agenda-row {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 0.7rem;
+        padding: 0.45rem 0.25rem;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .agenda-time {
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      .speaker-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7rem;
+      }
+
+      .speaker-intro img {
+        width: 220px;
+        height: 220px;
+        border-radius: 16px;
+        object-fit: cover;
+        background: #dbeafe;
+      }
+
+      .speaker-intro .name {
+        font-size: 1.8rem;
+        font-weight: 800;
+      }
+
+      .speaker-intro .affiliation {
+        font-size: 1.2rem;
+        color: var(--muted);
+      }
+
+      .speaker-intro .talk-title {
+        margin-top: 0.35rem;
+        font-size: 1.45rem;
+        color: #374151;
+        max-width: 900px;
+        text-align: center;
+      }
+
+      .paper-title {
+        max-width: 1000px;
+        margin: 1rem auto 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      .accepted-papers-grid {
+        margin: 0.8rem auto 0;
+        max-width: 1120px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.45rem 1.25rem;
+        text-align: left;
+      }
+
+      .accepted-paper {
+        padding: 0.35rem 0;
+        border-bottom: 1px solid #d1d5db;
+      }
+
+      .accepted-paper-title {
+        font-size: 0.68rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .accepted-paper-authors {
+        margin-top: 0.18rem;
+        font-size: 0.48rem;
+        color: var(--muted);
+        line-height: 1.2;
+      }
+
+      .accepted-paper-track {
+        color: var(--accent);
+        font-size: 0.43rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .break-slide-note {
+        max-width: 900px;
+        margin: 1rem auto 0;
+        font-size: 1.25rem;
+        color: var(--muted);
+        line-height: 1.4;
+      }
+
+      @media (max-width: 900px) {
+        .agenda-row {
+          grid-template-columns: 90px 1fr;
+        }
+
+        #speakers-grid {
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+
+        .accepted-papers-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .committee-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .organizers-row-5,
+        .organizers-row-4,
+        .organizers-row-3,
+        .organizers-row-2 {
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="title-slide">
+          <h1 id="workshop-title"></h1>
+          <p class="subtitle" id="workshop-subtitle"></p>
+          <p class="meta" id="workshop-meta"></p>
+        </section>
+
+        <section>
+          <h2>Why Are We Here?</h2>
+          <div class="why-intro">
+            <p class="why-focus">Our focus: behavior.</p>
+            <p class="why-intro-lead">Robust autonomy requires more than accurate perception: vehicles must learn safe, human-like decisions that generalize to the long tail of real-world driving.</p>
+            <div class="why-grid">
+              <article class="why-topic fragment" data-fragment-index="1">
+                <h3>Behavior Learning</h3>
+                <p>How can imitation learning, offline RL, and online fine-tuning produce reliable driving behavior rather than merely reproduce expert data?</p>
+              </article>
+              <article class="why-topic fragment" data-fragment-index="2">
+                <h3>Emergence Through Self-Play</h3>
+                <p>Self-play and multi-agent reinforcement learning can discover diverse skills and robust out-of-distribution behavior at scale.</p>
+              </article>
+              <article class="why-topic fragment" data-fragment-index="3">
+                <h3>Closed-Loop Worlds</h3>
+                <p>Generative world models, VLA models, and GPU-accelerated simulation create controllable environments for training, evaluation, and sim-to-real transfer.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Organizers</h2>
+          <div id="organizers-row-1" class="people-grid organizers-row organizers-row-4"></div>
+          <div id="organizers-row-2" class="people-grid organizers-row organizers-row-3"></div>
+        </section>
+
+        <section>
+          <h2>Invited Speakers</h2>
+          <div id="speakers-grid" class="people-grid"></div>
+        </section>
+
+        <section>
+          <h2>Accepted Papers</h2>
+          <div class="accepted-papers-grid">
+            <article class="accepted-paper">
+              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-title">Pictura: Perspective View Self-Play at Scale for Driving</div>
+              <div class="accepted-paper-authors">Yuan Yin, Elias Ramzi, Marc Lafon, Valentin Charraut, Victor Bares, Yihong Xu, Eloi Zablocki, Alexandre Boulch, Thibault Buhet, Andrei Bursuc, Matthieu Cord</div>
+            </article>
+            <article class="accepted-paper">
+              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-title">DiffuSearch: How Hybrid Trajectory Planning Benefits from Aligned Objectives in Diffusion and Action Space</div>
+              <div class="accepted-paper-authors">Steffen Hagedorn, Aron Distelzweig, Alexandru Paul Condurache</div>
+            </article>
+            <article class="accepted-paper">
+              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-title">One Diffusion Model, Two Roles: Guided Trajectory Planning and Safety-Critical Scenario Generation in Closed-Loop Simulation</div>
+              <div class="accepted-paper-authors">Arka Pal, Rajesh Kumar, Hannes Eriksson, Rémi Lacombe, Arvid Laveno Ling, Ankit Gupta, Maciej Wozniak</div>
+            </article>
+            <article class="accepted-paper">
+              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-title">What Emerges and What Breaks in Self-Play Driving</div>
+              <div class="accepted-paper-authors">Laur Sisask, Ardi Tampuu, Tambet Matiisen</div>
+            </article>
+            <article class="accepted-paper">
+              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-title">Trust, but Gate: Reliability-Aware Future Conditioning for Lightweight End-to-End Driving</div>
+              <div class="accepted-paper-authors">Liping Meng, Chen Zhang, Lingxiang Hu, Jintao Ma, Yixuan Wu, Yunyun Zhang, Weijun Hu, Gao Min, Dun Li</div>
+            </article>
+            <article class="accepted-paper">
+              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-title">Comfort by Construction: Adaptive, Comfort-Bounded Action Spaces for Learned Driving Policies</div>
+              <div class="accepted-paper-authors">Anna Rothenhäusler, Daniel Jost, Raghu Rajan, Faris Janjoš, Oliver Scheel, Andreas Look, Joschka Boedecker</div>
+            </article>
+            <article class="accepted-paper">
+              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-title">Language-Structured Relational Q-Learning for Threat-Aware Control in Safety-Critical Driving</div>
+              <div class="accepted-paper-authors">Aditya Humnabadkar, Ardhendu Behera, Huaizhong Zhang</div>
+            </article>
+            <article class="accepted-paper">
+              <div class="accepted-paper-track">Non-Archival</div>
+              <div class="accepted-paper-title">Think Twice, Drive Once: Dual Latent World Models for Efficient Self-Corrective Trajectory Planning</div>
+              <div class="accepted-paper-authors">Yang Chen, Yuwen Heng, Wang Shuo, Jiang Anqing, Wenliang Su, Hai Yang, Rui Zhang, Xin Li, Wenbin He, Liu Ren, Hao Sun</div>
+            </article>
+            <article class="accepted-paper">
+              <div class="accepted-paper-track">Non-Archival</div>
+              <div class="accepted-paper-title">A Rich Navigation-Interface for Hardware Accelerated Driving Simulators</div>
+              <div class="accepted-paper-authors">Arvid Laveno Ling, Olle Brännlund, Ivo Batkovic, Lars Johannesson Mårdh</div>
+            </article>
+            <article class="accepted-paper">
+              <div class="accepted-paper-track">Non-Archival</div>
+              <div class="accepted-paper-title">PRIX: learning to plan from raw pixels for end-to-end autonomous driving</div>
+              <div class="accepted-paper-authors">Maciej Wozniak</div>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2>Program Committee</h2>
+          <div class="committee-grid">
+            <div class="committee-member"><div class="committee-name">Andreas Look</div><div class="committee-affiliation">Coburg University of Applied Sciences</div></div>
+            <div class="committee-member"><div class="committee-name">Boris Ivanovic</div><div class="committee-affiliation">NVIDIA</div></div>
+            <div class="committee-member"><div class="committee-name">Daphne Cornelisse</div><div class="committee-affiliation">New York University</div></div>
+            <div class="committee-member"><div class="committee-name">Faris Janjoš</div><div class="committee-affiliation">Bosch Center for AI</div></div>
+            <div class="committee-member"><div class="committee-name">Luigi Palmieri</div><div class="committee-affiliation">Bosch Center for AI</div></div>
+            <div class="committee-member"><div class="committee-name">Shuhan Tan</div><div class="committee-affiliation">University of Texas at Austin</div></div>
+            <div class="committee-member"><div class="committee-name">Max Naumann</div><div class="committee-affiliation">Zoox</div></div>
+            <div class="committee-member"><div class="committee-name">Yu Yao</div><div class="committee-affiliation">Motional</div></div>
+            <div class="committee-member"><div class="committee-name">Felix Jahncke</div><div class="committee-affiliation">TU Munich</div></div>
+            <div class="committee-member"><div class="committee-name">Alexander Naumann</div><div class="committee-affiliation">NVIDIA</div></div>
+            <div class="committee-member"><div class="committee-name">Daniel Dauner</div><div class="committee-affiliation">NVIDIA</div></div>
+            <div class="committee-member"><div class="committee-name">Julian Hunt</div><div class="committee-affiliation">New York University</div></div>
+            <div class="committee-member"><div class="committee-name">Aron Distelzweig</div><div class="committee-affiliation">Bosch Center for AI</div></div>
+            <div class="committee-member"><div class="committee-name">Oliver Scheel</div><div class="committee-affiliation">Bosch Center for AI</div></div>
+            <div class="committee-member"><div class="committee-name">Andrey Rudenko</div><div class="committee-affiliation">TU Munich</div></div>
+            <div class="committee-member"><div class="committee-name">Xiuyu Yang</div><div class="committee-affiliation">Tsinghua University</div></div>
+            <div class="committee-member"><div class="committee-name">Meghana Ganesina</div><div class="committee-affiliation">Zoox</div></div>
+            <div class="committee-member"><div class="committee-name">Nitheesh K Lakshminarayana</div><div class="committee-affiliation">Nimble Robotics</div></div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Agenda</h2>
+          <div id="agenda-list" class="agenda-list"></div>
+        </section>
+      </div>
+    </div>
+    <div id="fallback-hint" class="fallback-hint">Fallback mode: use Left/Right arrows</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script>
+      const workshop = {
+        titlePrefix: "ECCV 2026 Workshop",
+        titleMain: "Emerging Behaviors for Achieving Robust Autonomy",
+        subtitle: "Tuesday 8 September 2026",
+        meta: "09:00-17:45 | Room: Malmömässan E2 | Malmö, Sweden",
+      };
+
+      const organizers = [
+        { name: "Luigi Palmieri", affiliation: "Bosch Center for AI", image: "../images/Organizers/palmieri_luigi.png" },
+        { name: "Boris Ivanovic", affiliation: "NVIDIA", image: "../images/Organizers/boris_ivanovic.jpg" },
+        { name: "Faris Janjoš", affiliation: "Bosch Center for AI", image: "../images/Organizers/faris_janjos.jpeg" },
+        { name: "Andreas Look", affiliation: "Coburg University of Applied Sciences", image: "../images/Organizers/look_andreas_cropped.jpg" },
+        { name: "Daphne Cornelisse", affiliation: "New York University", image: "../images/Organizers/daphne_cornelisse.jpg" },
+        { name: "Shuhan Tan", affiliation: "University of Texas at Austin", image: "../images/Organizers/shuhan_tan.jpg" },
+        { name: "Max Naumann", affiliation: "Zoox", image: "../images/Organizers/max_naumann.jpg" },
+      ];
+      const organizersRow1 = organizers.slice(0, 4);
+      const organizersRow2 = organizers.slice(4);
+
+      const invitedSpeakers = [
+        { name: "Eugene Vinitsky", affiliation: "New York University", image: "../images/Speakers/eugene_vinitsky.jpg" },
+        { name: "Li Chen", affiliation: "University of Hong Kong", image: "../images/Speakers/li_chen.jpg" },
+        { name: "Vassia Simaiaki", affiliation: "Wayve", image: "../images/Speakers/vassia_simaiaki.jpg" },
+        { name: "Peter Karkus", affiliation: "NVIDIA", image: "../images/Speakers/peter_karkus.jpg" },
+        { name: "Bernhard Jaeger", affiliation: "KE:SAI", image: "../images/Speakers/bernhard_jaeger.jpg" },
+        { name: "Max Jiang", affiliation: "Waymo", image: "../images/Speakers/max_jiang.jpg" },
+        { name: "Wei Zhan", affiliation: "Applied Intuition", image: "../images/Speakers/wei_zhan.png" },
+        { name: "Wayne Wu", affiliation: "University of California, Los Angeles", image: "../images/Speakers/wayne_wu.png" },
+      ];
+
+      // Keep intro slides in actual agenda speaking order.
+      const speakerIntroOrder = [
+        "Eugene Vinitsky",
+        "Li Chen",
+        "Vassia Simaiaki",
+        "Bernhard Jaeger",
+        "Peter Karkus",
+        "Wayne Wu",
+        "Wei Zhan",
+        "Max Jiang",
+      ];
+
+      const orderedSpeakerIntros = speakerIntroOrder.map((name) =>
+        invitedSpeakers.find((speaker) => speaker.name === name)
+      );
+
+      const agenda = [
+        { time: "09:00 - 09:15", title: "Welcome and Introduction" },
+        { time: "09:15 - 09:45", title: "Eugene Vinitsky - What's the point of human data?" },
+        { time: "09:45 - 10:15", title: "Li Chen - TBA" },
+        { time: "10:15 - 11:00", title: "Coffee Break" },
+        { time: "11:00 - 11:15", title: "Accepted Paper Highlight: Pictura: Perspective View Self-Play at Scale for Driving" },
+        { time: "11:15 - 11:30", title: "Accepted Paper Highlight: PRIX: learning to plan from raw pixels for end-to-end autonomous driving" },
+        { time: "11:30 - 12:00", title: "Vassia Simaiaki - TBA" },
+        { time: "12:00 - 13:30", title: "Lunch" },
+        { time: "13:30 - 14:00", title: "Bernhard Jaeger - How End-to-End Driving Abandoned Behavior Learning, and How to Get It Back" },
+        { time: "14:00 - 14:30", title: "Peter Karkus - TBA" },
+        { time: "14:30 - 15:30", title: "Poster Session" },
+        { time: "15:30 - 16:00", title: "Coffee Break" },
+        { time: "16:00 - 16:30", title: "Wayne Wu - TBA" },
+        { time: "16:30 - 17:00", title: "Wei Zhan - TBA" },
+        { time: "17:00 - 17:30", title: "Max Jiang - TBA" },
+        { time: "17:30 - 17:45", title: "Closing" },
+      ];
+      const talkTitles = {
+        "Eugene Vinitsky": "What's the point of human data?",
+        "Bernhard Jaeger": "How End-to-End Driving Abandoned Behavior Learning, and How to Get It Back",
+      };
+
+      function initialsFromName(name) {
+        return name
+          .split(" ")
+          .map((part) => part[0] || "")
+          .join("")
+          .slice(0, 2)
+          .toUpperCase();
+      }
+
+      function placeholderFor(name) {
+        const initials = initialsFromName(name);
+        const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><rect width='100%' height='100%' fill='#dbeafe'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='72' font-family='Arial, sans-serif' fill='#2563eb'>${initials}</text></svg>`;
+        return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+      }
+
+      function personCard(person, extraClass = "") {
+        const classSuffix = extraClass ? ` ${extraClass}` : "";
+        return `
+          <article class="person-card${classSuffix}">
+            <img data-image-path="${person.image}" data-person-name="${person.name}" alt="${person.name}" />
+            <div class="person-name">${person.name}</div>
+            <div class="person-affiliation">${person.affiliation}</div>
+          </article>
+        `;
+      }
+
+      function renderPeople(targetId, people, cardClass = "") {
+        document.getElementById(targetId).innerHTML = people.map((person) => personCard(person, cardClass)).join("");
+      }
+
+      document.getElementById("workshop-title").innerHTML = `
+        <span class="title-prefix">${workshop.titlePrefix}</span>
+        ${workshop.titleMain}
+      `;
+      document.getElementById("workshop-subtitle").textContent = workshop.subtitle;
+      document.getElementById("workshop-meta").textContent = workshop.meta;
+
+      renderPeople("organizers-row-1", organizersRow1, "compact");
+      renderPeople("organizers-row-2", organizersRow2, "compact");
+      renderPeople("speakers-grid", invitedSpeakers);
+
+      document.getElementById("agenda-list").innerHTML = agenda
+        .map(
+          (item) => `
+          <div class="agenda-row">
+            <div class="agenda-time">${item.time}</div>
+            <div>${item.title}</div>
+          </div>
+        `
+        )
+        .join("");
+
+      const slidesRoot = document.querySelector(".slides");
+      orderedSpeakerIntros.forEach((speaker) => {
+        if (speaker.name === "Vassia Simaiaki") {
+          const breakSlide = document.createElement("section");
+          breakSlide.innerHTML = `
+            <h2>Coffee Break</h2>
+            <p class="break-slide-note">Malmömässan Exhibit Hall</p>
+            <p class="break-slide-note">We resume at 11:00 with the accepted paper highlights.</p>
+          `;
+          slidesRoot.appendChild(breakSlide);
+
+          const picturaSlide = document.createElement("section");
+          picturaSlide.innerHTML = `
+            <h2>Accepted Paper Highlight</h2>
+            <p class="paper-title">Pictura: Perspective View Self-Play at Scale for Driving</p>
+          `;
+          slidesRoot.appendChild(picturaSlide);
+
+          const prixSlide = document.createElement("section");
+          prixSlide.innerHTML = `
+            <h2>Accepted Paper Highlight</h2>
+            <p class="paper-title">PRIX: learning to plan from raw pixels for end-to-end autonomous driving</p>
+          `;
+          slidesRoot.appendChild(prixSlide);
+        }
+
+        if (speaker.name === "Bernhard Jaeger") {
+          const lunchSlide = document.createElement("section");
+          lunchSlide.innerHTML = `
+            <h2>Lunch Break</h2>
+            <p class="break-slide-note">12:00-13:30</p>
+            <p class="break-slide-note">Malmö Arena</p>
+          `;
+          slidesRoot.appendChild(lunchSlide);
+        }
+
+        if (speaker.name === "Wayne Wu") {
+          const posterSlide = document.createElement("section");
+          posterSlide.innerHTML = `
+            <h2>Poster Session</h2>
+            <p class="break-slide-note">14:30-15:30</p>
+            <p class="break-slide-note">Malmömässan Exhibit Hall</p>
+          `;
+          slidesRoot.appendChild(posterSlide);
+
+          const afternoonBreakSlide = document.createElement("section");
+          afternoonBreakSlide.innerHTML = `
+            <h2>Coffee Break</h2>
+            <p class="break-slide-note">Malmömässan Exhibit Hall</p>
+            <p class="break-slide-note">We resume at 16:00 with Wayne Wu.</p>
+          `;
+          slidesRoot.appendChild(afternoonBreakSlide);
+        }
+
+        const section = document.createElement("section");
+        const talkTitle = talkTitles[speaker.name] || "Keynote";
+        section.innerHTML = `
+          <h2>Keynote</h2>
+          <div class="speaker-intro">
+            <img data-image-path="${speaker.image}" data-person-name="${speaker.name}" alt="${speaker.name}" />
+            <div class="name">${speaker.name}</div>
+            <div class="affiliation">${speaker.affiliation}</div>
+            <div class="talk-title">${talkTitle}</div>
+          </div>
+        `;
+        slidesRoot.appendChild(section);
+      });
+
+      const thankYouSlide = document.createElement("section");
+      thankYouSlide.innerHTML = `
+        <h2>Thank You</h2>
+        <p class="break-slide-note">Thank you to our speakers, authors, sponsors, and attendees.</p>
+      `;
+      slidesRoot.appendChild(thankYouSlide);
+
+      function wireImageFallbacks() {
+        document.querySelectorAll("img[data-image-path][data-person-name]").forEach((img) => {
+          const imagePath = img.dataset.imagePath;
+          const personName = img.dataset.personName || "Unknown";
+          const placeholder = placeholderFor(personName);
+
+          img.addEventListener("error", () => {
+            img.src = placeholder;
+          });
+
+          img.src = imagePath;
+        });
+      }
+
+      wireImageFallbacks();
+
+      function initFallbackDeck() {
+        const sections = Array.from(document.querySelectorAll(".slides > section"));
+        const hint = document.getElementById("fallback-hint");
+        let current = 0;
+
+        slidesRoot.classList.add("fallback-mode");
+        hint.style.display = "block";
+
+        function show(index) {
+          current = Math.max(0, Math.min(index, sections.length - 1));
+          sections.forEach((section, idx) => {
+            section.classList.toggle("fallback-active", idx === current);
+          });
+        }
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
+            show(current + 1);
+          } else if (event.key === "ArrowLeft" || event.key === "PageUp") {
+            show(current - 1);
+          }
+        });
+
+        show(0);
+      }
+
+      if (window.Reveal) {
+        const deck = new Reveal({
+          hash: true,
+          slideNumber: true,
+          transition: "slide",
+        });
+        deck.initialize();
+      } else {
+        initFallbackDeck();
+      }
+    </script>
+  </body>
+</html>
