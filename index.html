@@ -66,6 +66,9 @@
 			max-width: 100%;
 			filter: brightness(0) invert(1);
 		}
+		.nowrap-link {
+			white-space: nowrap;
+		}
     </style>
 </head>
 
@@ -214,15 +217,15 @@
 								<tr onClick='toggleRow(this)'>
 									<td>09:15 - 09:45</br>
 									<td><strong><a href="https://www.eugenevinitsky.com">Eugene Vinitsky</a></strong>, New York University</td>
-									<td>What's the point of human data?
+									<td>What's the Point of Human Data?
 									</td>
 									<td class='expanded-row-content hide-row'>TBA</td>
 								</tr>
 								<tr onClick='toggleRow(this)'>
 									<td>09:45 - 10:15</br>
 									<td><strong><a href="https://ilnehc.github.io/">Li Chen</a></strong>, University of Hong Kong</td>
-									<td>TBA</td>
-									<td class='expanded-row-content hide-row'>TBA</td>
+									<td>From Reliable World Simulation to Reinforcement Post-Training</td>
+									<td class='expanded-row-content hide-row'>Autonomous-driving systems benefit from scale, but the data that matter most—rare, hazardous interactions—remain scarce. This talk presents a research path from world models that predict to world engines that teach. I will introduce two works, ReSim and  World Engine, that organize real logs, simulation, generative modeling, and RL around one goal: concentrating learning on the safety-critical long tail. The talk closes with deployment-scale evidence and the remaining gaps toward reliable Physical AI.</td>
 								</tr>
 								<tr>
 									<td>10:15 - 11:00</td>
@@ -246,8 +249,8 @@
 								<tr onClick='toggleRow(this)'>
 									<td>11:30 - 12:00</br>
 									<td><strong><a href="#">Vassia Simaiaki</a></strong>, Wayve</td>
-									<td>TBA</td>
-									<td class='expanded-row-content hide-row'>TBA</td>
+									<td>From Road Reality to Learned Worlds: World Models for Robust Autonomous Driving</td>
+									<td class='expanded-row-content hide-row'>Real-world driving data captures the full complexity of human behavior, rare events, and safety-critical edge cases — but it is expensive, long-tailed, and hard to scale into diverse, controllable training signal. Generative world models offer a path to close this gap: learning realistic, controllable simulations directly from real driving footage, then using them to train and stress-test driving policies at scale. In this talk, I'll discuss Wayve's approach to building generative world models for driving, how they enable closed-loop training and evaluation beyond what real-world data alone allows, and the open challenges in grounding these learned worlds back in road reality to achieve robust, deployable autonomy.</td>
 								</tr>
 								<tr>
 									<td>12:00 - 13:30</td>
@@ -258,13 +261,13 @@
 									<td>13:30 - 14:00</br>
 									<td><strong><a href="https://kait0.github.io/">Bernhard Jaeger</a></strong>, KE:SAI</td>
 									<td>How End-to-End Driving Abandoned Behavior Learning, and How to Get It Back</td>
-									<td class='expanded-row-content hide-row'>TBA</td>
+									<td class='expanded-row-content hide-row'>End-to-end driving research began as behavior learning: policies were trained to imitate actions directly from images. Over the years the end-to-end driving community has made rapid progress, leading to widespread adoption of these techniques in industry today. Amidst that rapid progress, the community has quietly abandoned behavior learning. End-to-end driving systems today no longer predict the actions of the car. Instead, they make predictions about where a human would have driven, often encoded with the waypoint representation. The actual behavior of the car is then produced by a classical handwritten controller steering the car towards the waypoints. This switch enabled the community to bypass the classic compounding error problem, as the controller can produce behaviors that are absent from the training data. In this talk I am going to argue that a principled solution to embodied intelligence needs to return to behavior learning, as these workarounds have performance ceilings. Lastly, I will present recent progress and open problems on how we can get behavior learning back into end-to-end driving, training policies that directly map sensors to actions.</td>
 								</tr>
 								<tr onClick='toggleRow(this)'>
 									<td>14:00 - 14:30</br>
 									<td><strong><a href="https://research.nvidia.com/person/peter-karkus">Peter Karkus</a></strong>, NVIDIA</td>
-									<td>TBA</td>
-									<td class='expanded-row-content hide-row'>TBA</td>
+									<td>The Alpamayo Open Platform for Autonomous Driving: Reasoning VLAs, Simulation, and Closed-Loop RL</td>
+									<td class='expanded-row-content hide-row'>In this talk I will introduce Alpamayo, NVIDIA's open platform for reasoning-based autonomous vehicle development. Alpamayo contains a family of open-weight reasoning VLA models that produce interpretable chain-of-thought traces alongside trajectories. It also includes the critical tooling around them: 1,700 hours of curated driving data; and AlpaSim, a neural reconstruction-based end-to-end simulator. In the second part I will talk about the next frontier: closed-loop RL post-training. The industry default today is open-loop-only training on logged expert data. It takes us surprisingly far, but it has a ceiling: it leaves compounding errors, covariate shift, and causal confusion unaddressed, and no amount of open-loop data closes that gap. I will argue why, and show how to bridge it with closed-loop post-training using AlpaGym, our distributed closed-loop RL framework built on Cosmos RL.</td>
 								</tr>
 								<tr onClick='toggleRow(this)'>
 									<td>14:30 - 15:30</br>
@@ -280,20 +283,20 @@
 								<tr onClick='toggleRow(this)'>
 									<td>16:00 - 16:30</br>
 									<td><strong><a href="https://wywu.github.io/">Wayne Wu</a></strong>, University of California, Los Angeles</td>
-									<td>TBA</td>
-									<td class='expanded-row-content hide-row'>TBA</td>
+									<td>From Scaling up to Scaling out: Reality World Simulators for Physical AI</td>
+									<td class='expanded-row-content hide-row'>Recent progress in large language and vision models demonstrates how far we can go by scaling with vast internet-scale data. In contrast, physical AI, agents that perceive and act in the real world, still lags far behind. Today, both academia and industry primarily pursue generalizable physical AI by scaling up: collecting large-scale action–video datasets or training world models that enable interaction through learned environments. However, this paradigm is inherently inefficient and will soon reach a data ceiling. In this talk, I argue for a shift from scaling up to scaling out. I introduce reality world simulators, a new paradigm that converts real-world videos into diverse, interactive simulation environments. Instead of relying on more data collection, this approach expands data through structured reconstruction and recomposition, enabling both higher data efficiency and physically grounded interaction. I will present a three-pronged approach: 1) Scaling out via Digital Twins: reconstructing controllable, interactive environments from monocular videos to support diverse agent exploration. 2) Scaling out via Digital Cousins: disentangling scene structure into compositional elements to generate large-scale variations of real-world environments. 3) Scaling out via Embodied Humans: incorporating realistic human dynamics to improve safety and social compliance in robot learning. Finally, I will outline a roadmap toward building generalizable and safe physical AI systems for open-world deployment.</td>
 								</tr>
 								<tr onClick='toggleRow(this)'>
 									<td>16:30 - 17:00</br>
 									<td><strong><a href="https://zhanwei.site/">Wei Zhan</a></strong>, Applied Intuition</td>
-									<td>TBA</td>
-									<td class='expanded-row-content hide-row'>TBA</td>
+									<td>Imitation-Free E2E Autonomy Powered by Closed-Loop Scaling</td>
+									<td class='expanded-row-content hide-row'>The paradigm for L2++ ADAS has converged to imitation-based E2E, and human demonstration data have been the centerpiece. To bring robustness to the next level, autonomy is expected to train using closed-loop reinforcement learning (RL) with an action-conditioned world model, and large-scale closed-loop RL including self-play also reduces the demand of imitation from demonstration for policy learning. This talk addresses the roles of large-scale closed-loop RL and imitation in three major driving policy learning tasks - vector-based planner, reactive sim agent, and E2E planner, by discussing relevant works at Applied Intuition: 1) TerraZero as a high-throughput self-play RL framework (2.8M steps/s on 8 GPUs), obtains a robust policy learned from centuries of diverse driving experience in sim with zero demonstrations, setting SOTA on vector-based planning benchmarks with clear edge. 2) SPACeR as a fast, reactive, human-like sim agent, incorporates demonstration into large-scale self-play, achieving competitive performance with 10× faster at inference and 50× smaller in parameter size. 3) TerraTransfer as an E2E policy taught from the TerraZero expert with no imitation, by decoupling "learn to drive" and "learn to see", hits SOTA on closed-loop E2E driving benchmark. 4) A reactive world model with realistic, controllable behavior and visual consistency is also introduced, enabling large-scale closed-loop training.</td>
 								</tr>
 								<tr onClick='toggleRow(this)'>
 									<td>17:00 - 17:30</br>
 									<td><strong><a href="http://maxjiang.ml/">Max Jiang</a></strong>, Waymo</td>
-									<td>TBA</td>
-									<td class='expanded-row-content hide-row'>TBA</td>
+									<td>Emergent Multimodal World Knowledge in the Waymo World Model</td>
+									<td class='expanded-row-content hide-row'>Video-based world models possess strong future prediction abilities by pre-training on a vast repository of video data. The <a class="nowrap-link" href="https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation/">Waymo World Model</a> harnesses these future prediction capabilities from Genie 3 and translates this common sense knowledge to the driving domain, including emergent physics and behavioral understanding as well as emergent planning and reasoning capabilities. In this talk we will analyze these emergent abilities and discuss various avenues that we can harness these abilities to build a better, safer autonomous driver.</td>
 								</tr>
 								<tr>
 									<td>17:30 - 17:45</td>
@@ -412,36 +415,6 @@
 						</div>
 					</div>
 					</br>
-					<!--
-					<header class="major special">
-						<h2>Supporting IEEE RAS technical committees</h2>
-					</header>
-					<div class="row">
-						<div class="col-2 col-12-medium">
-							<span class="image fit"><img src="images/RAS-logo.png" alt="" /></span>
-						</div>
-						<div class="col-8 col-12-medium">
-							<ul>
-								<li><a href="https://www.ieee-ras.org/autonomous-ground-vehicles-and-intelligent-transportation-systems"
-										target="_blank">Technical committee on Autonomous Ground Vehicles and
-										Intelligent Transportation Systems</a>
-								</li>
-								<li><a href="https://www.ieee-ras.org/multi-robot-systems" target="_blank">Technical
-										committee on Multi-Robot Systems</a>
-								</li>
-								<li><a href="https://www.ieee-ras.org/algorithms-for-planning-and-control-of-robot-motion"
-										target="_blank">Technical committee on Algorithms for Planning and Control of
-										Robot Motion</a>
-								</li>
-								<li><a href="https://www.ieee-ras.org/performance-evaluation" target="_blank">Technical
-										Committee for Performance Evaluation & Benchmarking of Robotic and Autonomous
-										Systems</a>
-								</li>
-							</ul>
-
-						</div>
-					</div>
-					-->
 					<header class="major special">
 						<h2>Supported by</h2>
 					</header>

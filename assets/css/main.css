@@ -3606,6 +3606,10 @@ input, select, textarea {
 			border-top: solid 1px #dddddd;
 		}
 
+			#main > .main #accepted_papers {
+				padding: 6em 5em 4em 5em ;
+			}
+
 			#main > .main:first-child {
 				border-top: 0;
 			}
@@ -3632,6 +3636,10 @@ input, select, textarea {
 				padding: 4em 4em 2em 4em ;
 			}
 
+				#main > .main #accepted_papers {
+					padding: 5em 4em 3em 4em ;
+				}
+
 				#main > .main > .image.main:first-child {
 					margin: -4em 0 4em -4em;
 					width: calc(100% + 8em);
@@ -3644,6 +3652,10 @@ input, select, textarea {
 			#main > .main {
 				padding: 4em 3em 2em 3em ;
 			}
+
+				#main > .main #accepted_papers {
+					padding: 5em 3em 3em 3em ;
+				}
 
 				#main > .main > .image.main:first-child {
 					margin: -4em 0 4em -3em;
@@ -3658,6 +3670,10 @@ input, select, textarea {
 				padding: 3em 2em 1em 2em ;
 			}
 
+				#main > .main #accepted_papers {
+					padding: 4em 2em 2em 2em ;
+				}
+
 				#main > .main > .image.main:first-child {
 					margin: -3em 0 2em -2em;
 					width: calc(100% + 4em);
@@ -3670,6 +3686,10 @@ input, select, textarea {
 			#main > .main {
 				padding: 3em 1.5em 1em 1.5em ;
 			}
+
+				#main > .main #accepted_papers {
+					padding: 4em 1.5em 2em 1.5em ;
+				}
 
 				#main > .main > .image.main:first-child {
 					margin: -3em 0 1.5em -1.5em;
@@ -3687,6 +3707,10 @@ input, select, textarea {
 				#main > .main {
 					padding: 2.5em 1em 0.5em 1em ;
 				}
+
+					#main > .main #accepted_papers {
+						padding: 3.5em 1em 1.5em 1em ;
+					}
 
 					#main > .main > .image.main:first-child {
 						margin: -2.5em 0 1.5em -1em;

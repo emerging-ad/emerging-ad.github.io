@@ -14,6 +14,10 @@
 			@include padding(5em, 5em);
 			border-top: solid 1px _palette(invert, border);
 
+			#accepted_papers {
+				@include padding(6em, 5em);
+			}
+
 			&:first-child {
 				border-top: 0;
 			}
@@ -39,6 +43,10 @@
 			> .main {
 				@include padding(4em, 4em);
 
+				#accepted_papers {
+					@include padding(5em, 4em);
+				}
+
 				> .image.main:first-child {
 					margin: -4em 0 4em -4em;
 					width: calc(100% + 8em);
@@ -49,6 +57,10 @@
 		@include breakpoint('<=medium') {
 			> .main {
 				@include padding(4em, 3em);
+
+				#accepted_papers {
+					@include padding(5em, 3em);
+				}
 
 				> .image.main:first-child {
 					margin: -4em 0 4em -3em;
@@ -61,6 +73,10 @@
 			> .main {
 				@include padding(3em, 2em);
 
+				#accepted_papers {
+					@include padding(4em, 2em);
+				}
+
 				> .image.main:first-child {
 					margin: -3em 0 2em -2em;
 					width: calc(100% + 4em);
@@ -71,6 +87,10 @@
 		@include breakpoint('<=xsmall') {
 			> .main {
 				@include padding(3em, 1.5em);
+
+				#accepted_papers {
+					@include padding(4em, 1.5em);
+				}
 
 				> .image.main:first-child {
 					margin: -3em 0 1.5em -1.5em;
@@ -84,6 +104,10 @@
 
 			> .main {
 				@include padding(2.5em, 1em);
+
+				#accepted_papers {
+					@include padding(3.5em, 1em);
+				}
 
 				> .image.main:first-child {
 					margin: -2.5em 0 1.5em -1em;
