@@ -229,22 +229,22 @@
 								</tr>
 								<tr>
 									<td>10:15 - 11:00</td>
-									<td>Coffee Break</td>
+									<td>Coffee Break<br> Location: Malmömässan Exhibit Hall</td>
 									<td></td>
 								</tr>
 								<tr onClick='toggleRow(this)'>
 										<td>11:00 - 11:15</br>
-										<td>Paper Authors 
+										<td>Yuan Yin
 </a></strong></td>
 									<td>Accepted Paper Highlight</br>Pictura: Perspective View Self-Play at Scale for Driving</td>
-									<td class='expanded-row-content hide-row'>TBA
+									<td class='expanded-row-content hide-row'>Self-play in simulation produces robust driving policies at scale. Demonstrations of such behavior have been made using *privileged* vectorized observations such as exact poses and velocities, even for occluded agents. This assumes that perception is solved and introduces a representation gap with the partial observation of a deployed agent driving from the perspective view of egocentric cameras. A common fix, distilling the privileged policy into a camera-input student, leaves the student imitating decisions its own view cannot justify. Instead, we establish perspective-view self-play as a practical training regime. We introduce *Pictura*, a GPU-accelerated multi-agent driving simulator that renders each agent's egocentric view at every step, mitigating the representation gap at its source. *Pictura* sustains up to 500K agent-steps/s (2M images/s) on a single H100. Using *Pictura*, we train *Alberti* by self-play with plain PPO. It is the first large-scale driving self-play policy trained directly from perspective images, without privileged observations. Training spans 50B agent steps for ~35M km of driving. It approaches the driving performance of its privileged vectorized counterpart, and transfers zero-shot to Waymo Open Motion Dataset layouts re-rendered in *Pictura*, where it outperforms privileged vectorized agents. Code will be made available.
 								</tr>
 								<tr onClick='toggleRow(this)'>
 										<td>11:15 - 11:30</br>
-										<td>Paper Authors 
+										<td>Maciej Wozniak
 </a></strong></td>
-									<td>Accepted Paper Highlight</br>PRIX: learning to plan from raw pixels for end-to-end autonomous driving</td>
-									<td class='expanded-row-content hide-row'>TBA
+									<td>Accepted Paper Highlight</br>PRIX: Learning to Plan from Raw Pixels for End-to-End Autonomous Driving</td>
+									<td class='expanded-row-content hide-row'>While end-to-end autonomous driving models show promising results, practical deployment is often hindered by large model sizes, reliance on expensive LiDAR sensors, and computationally intensive Bird's-Eye-View (BEV) representations. To address these challenges, we propose \textbf{PRIX} (\textbf{P}lan from \textbf{R}aw p\textbf{IX}els), an efficient end-to-end architecture operating exclusively on camera data without explicit BEV representations or LiDAR. PRIX leverages a visual feature extractor paired with a generative planning head to directly predict safe trajectories. A core component is the Context-aware Recalibration Transformer (\textbf{CaRT}), a novel module designed to effectively enhance multi-level visual features for robust planning. PRIX achieves SOTA performance on NavSim-v2 and nuScenes while outperforming the majority of multimodal and camera-only planners on NavSim-v1. Crucially, PRIX is significantly faster (57 FPS) and smaller (37M parameters), offering a highly practical solution for real-world deployment. Code: anonymized for submission. 
 								</tr>
 								<tr onClick='toggleRow(this)'>
 									<td>11:30 - 12:00</br>
@@ -254,7 +254,7 @@
 								</tr>
 								<tr>
 									<td>12:00 - 13:30</td>
-									<td>Lunch</td>
+									<td>Lunch<br> Location: Malmö Arena</td>
 									<td></td>
 								</tr>
 								<tr onClick='toggleRow(this)'>
@@ -271,13 +271,12 @@
 								</tr>
 								<tr onClick='toggleRow(this)'>
 									<td>14:30 - 15:30</br>
-									<td>Poster Session</td>
+									<td>Poster Session <br> Location: Malmömässan Exhibit Hall 384-393</td>
 									<td></td>
-									<td class='expanded-row-content hide-row'>Posters: TBA</td>
 								</tr>
 								<tr>
 									<td>15:30 - 16:00</td>
-									<td>Coffee Break</td>
+									<td>Coffee Break<br> Location: Malmömässan Exhibit Hall</td>
 									<td></td>
 								</tr>
 								<tr onClick='toggleRow(this)'>
@@ -316,16 +315,16 @@
 						<h2>Accepted Papers</h2>
 					</header>
 					<ul style="display: grid; grid-template-columns: 1fr; gap: 0.6em; list-style: none; padding: 0; margin: 0;">
-						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong>Think Twice, Drive Once: Dual Latent World Models for Efficient Self-Corrective Trajectory Planning</strong><br/>Yang Chen, Yuwen Heng, Wang Shuo, Jiang Anqing, Wenliang Su, Hai Yang, Rui Zhang, Xin Li, Wenbin He, Liu Ren, Hao Sun</li>
-						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong>A Rich Navigation-Interface for Hardware Accelerated Driving Simulators</strong><br/>Arvid Laveno Ling, Olle Brännlund, Ivo Batkovic, Lars Johannesson Mårdh</li>
-						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong>PRIX: Learning to Plan from Raw Pixels for End-to-End Autonomous Driving</strong> <span style="background:#2c5cc5; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Oral</span><br/>Maciej Wozniak</li>
-						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong>Pictura: Perspective View Self-Play at Scale for Driving</strong> <span style="background:#2c5cc5; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Oral</span><br/>Yuan Yin, Elias Ramzi, Marc Lafon, Valentin Charraut, Victor Bares, Yihong Xu, Eloi Zablocki, Alexandre Boulch, Thibault Buhet, Andrei Bursuc, Matthieu Cord</li>
-						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong>DiffuSearch: How Hybrid Trajectory Planning Benefits from Aligned Objectives in Diffusion and Action Space</strong><br/>Steffen Hagedorn, Aron Distelzweig, Alexandru Paul Condurache</li>
-						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong>One Diffusion Model, Two Roles: Guided Trajectory Planning and Safety-Critical Scenario Generation in Closed-Loop Simulation</strong><br/>Arka Pal, Rajesh Kumar, Hannes Eriksson, Rémi Lacombe, Arvid Laveno Ling, Ankit Gupta, Maciej Wozniak</li>
-						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong>What Emerges and What Breaks in Self-Play Driving</strong><br/>Laur Sisask, Ardi Tampuu, Tambet Matiisen</li>
-						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong>Trust, but Gate: Reliability-Aware Future Conditioning for Lightweight End-to-End Driving</strong><br/>Liping Meng, Chen Zhang, Lingxiang Hu, Jintao Ma, Yixuan Wu, Yunyun Zhang, Weijun Hu, Gao Min, Dun Li</li>
-						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong>Comfort by Construction: Adaptive, Comfort-Bounded Action Spaces for Learned Driving Policies</strong><br/>Anna Rothenhäusler, Daniel Jost, Raghu Rajan, Faris Janjos, Oliver Scheel, Andreas Look, Joschka Boedecker</li>
-						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong>Language-Structured Relational Q-Learning for Threat-Aware Control in Safety-Critical Driving</strong><br/>Aditya Humnabadkar, Ardhendu Behera, Huaizhong Zhang</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong><a href="https://openreview.net/forum?id=tEMuyhOct2">Pictura: Perspective View Self-Play at Scale for Driving</a></strong> <span style="background:#6b7280; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Poster 384</span> <span style="background:#2c5cc5; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Oral</span><br/>Yuan Yin, Elias Ramzi, Marc Lafon, Valentin Charraut, Victor Bares, Yihong Xu, Eloi Zablocki, Alexandre Boulch, Thibault Buhet, Andrei Bursuc, Matthieu Cord</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong><a href="https://openreview.net/forum?id=lmeNI8Udn1">DiffuSearch: How Hybrid Trajectory Planning Benefits from Aligned Objectives in Diffusion and Action Space</a></strong> <span style="background:#6b7280; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Poster 385</span><br/>Steffen Hagedorn, Aron Distelzweig, Alexandru Paul Condurache</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong><a href="https://openreview.net/forum?id=KHrItEhx1V">One Diffusion Model, Two Roles: Guided Trajectory Planning and Safety-Critical Scenario Generation in Closed-Loop Simulation</a></strong> <span style="background:#6b7280; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Poster 386</span><br/>Arka Pal, Rajesh Kumar, Hannes Eriksson, Rémi Lacombe, Arvid Laveno Ling, Ankit Gupta, Maciej Wozniak</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong><a href="https://openreview.net/forum?id=9RTZig9tVR">What Emerges and What Breaks in Self-Play Driving</a></strong> <span style="background:#6b7280; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Poster 387</span><br/>Laur Sisask, Ardi Tampuu, Tambet Matiisen</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong><a href="https://openreview.net/forum?id=wB8isFY0Ql">Trust, but Gate: Reliability-Aware Future Conditioning for Lightweight End-to-End Driving</a></strong> <span style="background:#6b7280; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Poster 388</span><br/>Liping Meng, Chen Zhang, Lingxiang Hu, Jintao Ma, Yixuan Wu, Yunyun Zhang, Weijun Hu, Gao Min, Dun Li</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong><a href="https://openreview.net/forum?id=1FNVhLdN0t">Comfort by Construction: Adaptive, Comfort-Bounded Action Spaces for Learned Driving Policies</a></strong> <span style="background:#6b7280; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Poster 389</span><br/>Anna Rothenhäusler, Daniel Jost, Raghu Rajan, Faris Janjos, Oliver Scheel, Andreas Look, Joschka Boedecker</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong><a href="https://openreview.net/forum?id=XP2mG3Wd89">Language-Structured Relational Q-Learning for Threat-Aware Control in Safety-Critical Driving</a></strong> <span style="background:#6b7280; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Poster 390</span><br/>Aditya Humnabadkar, Ardhendu Behera, Huaizhong Zhang</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong><a href="https://openreview.net/forum?id=YcDNNtEDMm">PRIX: Learning to Plan from Raw Pixels for End-to-End Autonomous Driving</a></strong> <span style="background:#6b7280; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Poster 391</span> <span style="background:#2c5cc5; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Oral</span><br/>Maciej Wozniak</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong><a href="https://openreview.net/forum?id=Vd3h3d4U05">Think Twice, Drive Once: Dual Latent World Models for Efficient Self-Corrective Trajectory Planning</a></strong> <span style="background:#6b7280; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Poster 392</span><br/>Yang Chen, Yuwen Heng, Wang Shuo, Jiang Anqing, Wenliang Su, Hai Yang, Rui Zhang, Xin Li, Wenbin He, Liu Ren, Hao Sun</li>
+						<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.7em 0.95em;"><strong><a href="https://openreview.net/forum?id=BRVLSSS8Ay">A Rich Navigation-Interface for Hardware Accelerated Driving Simulators</a></strong> <span style="background:#6b7280; color:#fff; font-size:0.75em; font-weight:600; border-radius:4px; padding:0.15em 0.5em; margin-left:0.3em;">Poster 393</span><br/>Arvid Laveno Ling, Olle Brännlund, Ivo Batkovic, Lars Johannesson Mårdh</li>
 					</ul>
 				</div>
 			</section>
