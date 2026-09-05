@@ -344,6 +344,17 @@
         text-transform: uppercase;
       }
 
+      .poster-session-list {
+        max-width: 900px;
+        margin: 1rem auto 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.4rem 1.5rem;
+        text-align: left;
+        font-size: 0.8rem;
+        line-height: 1.3;
+      }
+
       .break-slide-note {
         max-width: 900px;
         margin: 1rem auto 0;
@@ -428,53 +439,55 @@
           <h2>Accepted Papers</h2>
           <div class="accepted-papers-grid">
             <article class="accepted-paper">
-              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-track">Poster 384</div>
               <div class="accepted-paper-title">Pictura: Perspective View Self-Play at Scale for Driving</div>
+              <div class="accepted-paper-authors">Oral presenter: Yuan Yin</div>
               <div class="accepted-paper-authors">Yuan Yin, Elias Ramzi, Marc Lafon, Valentin Charraut, Victor Bares, Yihong Xu, Eloi Zablocki, Alexandre Boulch, Thibault Buhet, Andrei Bursuc, Matthieu Cord</div>
             </article>
             <article class="accepted-paper">
-              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-track">Poster 385</div>
               <div class="accepted-paper-title">DiffuSearch: How Hybrid Trajectory Planning Benefits from Aligned Objectives in Diffusion and Action Space</div>
               <div class="accepted-paper-authors">Steffen Hagedorn, Aron Distelzweig, Alexandru Paul Condurache</div>
             </article>
             <article class="accepted-paper">
-              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-track">Poster 386</div>
               <div class="accepted-paper-title">One Diffusion Model, Two Roles: Guided Trajectory Planning and Safety-Critical Scenario Generation in Closed-Loop Simulation</div>
               <div class="accepted-paper-authors">Arka Pal, Rajesh Kumar, Hannes Eriksson, Rémi Lacombe, Arvid Laveno Ling, Ankit Gupta, Maciej Wozniak</div>
             </article>
             <article class="accepted-paper">
-              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-track">Poster 387</div>
               <div class="accepted-paper-title">What Emerges and What Breaks in Self-Play Driving</div>
               <div class="accepted-paper-authors">Laur Sisask, Ardi Tampuu, Tambet Matiisen</div>
             </article>
             <article class="accepted-paper">
-              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-track">Poster 388</div>
               <div class="accepted-paper-title">Trust, but Gate: Reliability-Aware Future Conditioning for Lightweight End-to-End Driving</div>
               <div class="accepted-paper-authors">Liping Meng, Chen Zhang, Lingxiang Hu, Jintao Ma, Yixuan Wu, Yunyun Zhang, Weijun Hu, Gao Min, Dun Li</div>
             </article>
             <article class="accepted-paper">
-              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-track">Poster 389</div>
               <div class="accepted-paper-title">Comfort by Construction: Adaptive, Comfort-Bounded Action Spaces for Learned Driving Policies</div>
               <div class="accepted-paper-authors">Anna Rothenhäusler, Daniel Jost, Raghu Rajan, Faris Janjoš, Oliver Scheel, Andreas Look, Joschka Boedecker</div>
             </article>
             <article class="accepted-paper">
-              <div class="accepted-paper-track">Archival</div>
+              <div class="accepted-paper-track">Poster 390</div>
               <div class="accepted-paper-title">Language-Structured Relational Q-Learning for Threat-Aware Control in Safety-Critical Driving</div>
               <div class="accepted-paper-authors">Aditya Humnabadkar, Ardhendu Behera, Huaizhong Zhang</div>
             </article>
             <article class="accepted-paper">
-              <div class="accepted-paper-track">Non-Archival</div>
+              <div class="accepted-paper-track">Poster 392</div>
               <div class="accepted-paper-title">Think Twice, Drive Once: Dual Latent World Models for Efficient Self-Corrective Trajectory Planning</div>
               <div class="accepted-paper-authors">Yang Chen, Yuwen Heng, Wang Shuo, Jiang Anqing, Wenliang Su, Hai Yang, Rui Zhang, Xin Li, Wenbin He, Liu Ren, Hao Sun</div>
             </article>
             <article class="accepted-paper">
-              <div class="accepted-paper-track">Non-Archival</div>
+              <div class="accepted-paper-track">Poster 393</div>
               <div class="accepted-paper-title">A Rich Navigation-Interface for Hardware Accelerated Driving Simulators</div>
               <div class="accepted-paper-authors">Arvid Laveno Ling, Olle Brännlund, Ivo Batkovic, Lars Johannesson Mårdh</div>
             </article>
             <article class="accepted-paper">
-              <div class="accepted-paper-track">Non-Archival</div>
-              <div class="accepted-paper-title">PRIX: learning to plan from raw pixels for end-to-end autonomous driving</div>
+              <div class="accepted-paper-track">Poster 391</div>
+              <div class="accepted-paper-title">PRIX: Learning to Plan from Raw Pixels for End-to-End Autonomous Driving</div>
+              <div class="accepted-paper-authors">Oral presenter: Maciej Wozniak</div>
               <div class="accepted-paper-authors">Maciej Wozniak</div>
             </article>
           </div>
@@ -562,25 +575,31 @@
 
       const agenda = [
         { time: "09:00 - 09:15", title: "Welcome and Introduction" },
-        { time: "09:15 - 09:45", title: "Eugene Vinitsky - What's the point of human data?" },
-        { time: "09:45 - 10:15", title: "Li Chen - TBA" },
+        { time: "09:15 - 09:45", title: "Eugene Vinitsky - What's the Point of Human Data?" },
+        { time: "09:45 - 10:15", title: "Li Chen - From Reliable World Simulation to Reinforcement Post-Training" },
         { time: "10:15 - 11:00", title: "Coffee Break" },
-        { time: "11:00 - 11:15", title: "Accepted Paper Highlight: Pictura: Perspective View Self-Play at Scale for Driving" },
-        { time: "11:15 - 11:30", title: "Accepted Paper Highlight: PRIX: learning to plan from raw pixels for end-to-end autonomous driving" },
-        { time: "11:30 - 12:00", title: "Vassia Simaiaki - TBA" },
+        { time: "11:00 - 11:15", title: "Accepted Paper Highlight: Yuan Yin - Pictura: Perspective View Self-Play at Scale for Driving" },
+        { time: "11:15 - 11:30", title: "Accepted Paper Highlight: Maciej Wozniak - PRIX: Learning to Plan from Raw Pixels for End-to-End Autonomous Driving" },
+        { time: "11:30 - 12:00", title: "Vassia Simaiaki - From Road Reality to Learned Worlds: World Models for Robust Autonomous Driving" },
         { time: "12:00 - 13:30", title: "Lunch" },
         { time: "13:30 - 14:00", title: "Bernhard Jaeger - How End-to-End Driving Abandoned Behavior Learning, and How to Get It Back" },
-        { time: "14:00 - 14:30", title: "Peter Karkus - TBA" },
+        { time: "14:00 - 14:30", title: "Peter Karkus - The Alpamayo Open Platform for Autonomous Driving: Reasoning VLAs, Simulation, and Closed-Loop RL" },
         { time: "14:30 - 15:30", title: "Poster Session" },
         { time: "15:30 - 16:00", title: "Coffee Break" },
-        { time: "16:00 - 16:30", title: "Wayne Wu - TBA" },
-        { time: "16:30 - 17:00", title: "Wei Zhan - TBA" },
-        { time: "17:00 - 17:30", title: "Max Jiang - TBA" },
+        { time: "16:00 - 16:30", title: "Wayne Wu - From Scaling up to Scaling out: Reality World Simulators for Physical AI" },
+        { time: "16:30 - 17:00", title: "Wei Zhan - Imitation-Free E2E Autonomy Powered by Closed-Loop Scaling" },
+        { time: "17:00 - 17:30", title: "Max Jiang - Emergent Multimodal World Knowledge in the Waymo World Model" },
         { time: "17:30 - 17:45", title: "Closing" },
       ];
       const talkTitles = {
-        "Eugene Vinitsky": "What's the point of human data?",
+        "Eugene Vinitsky": "What's the Point of Human Data?",
+        "Li Chen": "From Reliable World Simulation to Reinforcement Post-Training",
+        "Vassia Simaiaki": "From Road Reality to Learned Worlds: World Models for Robust Autonomous Driving",
         "Bernhard Jaeger": "How End-to-End Driving Abandoned Behavior Learning, and How to Get It Back",
+        "Peter Karkus": "The Alpamayo Open Platform for Autonomous Driving: Reasoning VLAs, Simulation, and Closed-Loop RL",
+        "Wayne Wu": "From Scaling up to Scaling out: Reality World Simulators for Physical AI",
+        "Wei Zhan": "Imitation-Free E2E Autonomy Powered by Closed-Loop Scaling",
+        "Max Jiang": "Emergent Multimodal World Knowledge in the Waymo World Model",
       };
 
       function initialsFromName(name) {
@@ -650,13 +669,15 @@
           picturaSlide.innerHTML = `
             <h2>Accepted Paper Highlight</h2>
             <p class="paper-title">Pictura: Perspective View Self-Play at Scale for Driving</p>
+            <p class="break-slide-note">Yuan Yin</p>
           `;
           slidesRoot.appendChild(picturaSlide);
 
           const prixSlide = document.createElement("section");
           prixSlide.innerHTML = `
             <h2>Accepted Paper Highlight</h2>
-            <p class="paper-title">PRIX: learning to plan from raw pixels for end-to-end autonomous driving</p>
+            <p class="paper-title">PRIX: Learning to Plan from Raw Pixels for End-to-End Autonomous Driving</p>
+            <p class="break-slide-note">Maciej Wozniak</p>
           `;
           slidesRoot.appendChild(prixSlide);
         }
@@ -677,6 +698,18 @@
             <h2>Poster Session</h2>
             <p class="break-slide-note">14:30-15:30</p>
             <p class="break-slide-note">Malmömässan Exhibit Hall</p>
+            <div class="poster-session-list">
+              <div><strong>Poster 384</strong> - Pictura: Perspective View Self-Play at Scale for Driving</div>
+              <div><strong>Poster 385</strong> - DiffuSearch: How Hybrid Trajectory Planning Benefits from Aligned Objectives in Diffusion and Action Space</div>
+              <div><strong>Poster 386</strong> - One Diffusion Model, Two Roles: Guided Trajectory Planning and Safety-Critical Scenario Generation in Closed-Loop Simulation</div>
+              <div><strong>Poster 387</strong> - What Emerges and What Breaks in Self-Play Driving</div>
+              <div><strong>Poster 388</strong> - Trust, but Gate: Reliability-Aware Future Conditioning for Lightweight End-to-End Driving</div>
+              <div><strong>Poster 389</strong> - Comfort by Construction: Adaptive, Comfort-Bounded Action Spaces for Learned Driving Policies</div>
+              <div><strong>Poster 390</strong> - Language-Structured Relational Q-Learning for Threat-Aware Control in Safety-Critical Driving</div>
+              <div><strong>Poster 391</strong> - PRIX: Learning to Plan from Raw Pixels for End-to-End Autonomous Driving</div>
+              <div><strong>Poster 392</strong> - Think Twice, Drive Once: Dual Latent World Models for Efficient Self-Corrective Trajectory Planning</div>
+              <div><strong>Poster 393</strong> - A Rich Navigation-Interface for Hardware Accelerated Driving Simulators</div>
+            </div>
           `;
           slidesRoot.appendChild(posterSlide);
 
