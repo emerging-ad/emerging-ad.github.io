@@ -234,17 +234,17 @@
 								</tr>
 								<tr onClick='toggleRow(this)'>
 										<td>11:00 - 11:15</br>
-										<td>Yuan Yin
-</a></strong></td>
-									<td>Accepted Paper Highlight</br>Pictura: Perspective View Self-Play at Scale for Driving</td>
-									<td class='expanded-row-content hide-row'>Self-play in simulation produces robust driving policies at scale. Demonstrations of such behavior have been made using *privileged* vectorized observations such as exact poses and velocities, even for occluded agents. This assumes that perception is solved and introduces a representation gap with the partial observation of a deployed agent driving from the perspective view of egocentric cameras. A common fix, distilling the privileged policy into a camera-input student, leaves the student imitating decisions its own view cannot justify. Instead, we establish perspective-view self-play as a practical training regime. We introduce *Pictura*, a GPU-accelerated multi-agent driving simulator that renders each agent's egocentric view at every step, mitigating the representation gap at its source. *Pictura* sustains up to 500K agent-steps/s (2M images/s) on a single H100. Using *Pictura*, we train *Alberti* by self-play with plain PPO. It is the first large-scale driving self-play policy trained directly from perspective images, without privileged observations. Training spans 50B agent steps for ~35M km of driving. It approaches the driving performance of its privileged vectorized counterpart, and transfers zero-shot to Waymo Open Motion Dataset layouts re-rendered in *Pictura*, where it outperforms privileged vectorized agents. Code will be made available.
-								</tr>
-								<tr onClick='toggleRow(this)'>
-										<td>11:15 - 11:30</br>
 										<td>Maciej Wozniak
 </a></strong></td>
 									<td>Accepted Paper Highlight</br>PRIX: Learning to Plan from Raw Pixels for End-to-End Autonomous Driving</td>
 									<td class='expanded-row-content hide-row'>While end-to-end autonomous driving models show promising results, practical deployment is often hindered by large model sizes, reliance on expensive LiDAR sensors, and computationally intensive Bird's-Eye-View (BEV) representations. To address these challenges, we propose \textbf{PRIX} (\textbf{P}lan from \textbf{R}aw p\textbf{IX}els), an efficient end-to-end architecture operating exclusively on camera data without explicit BEV representations or LiDAR. PRIX leverages a visual feature extractor paired with a generative planning head to directly predict safe trajectories. A core component is the Context-aware Recalibration Transformer (\textbf{CaRT}), a novel module designed to effectively enhance multi-level visual features for robust planning. PRIX achieves SOTA performance on NavSim-v2 and nuScenes while outperforming the majority of multimodal and camera-only planners on NavSim-v1. Crucially, PRIX is significantly faster (57 FPS) and smaller (37M parameters), offering a highly practical solution for real-world deployment. Code: anonymized for submission. 
+								</tr>
+								<tr onClick='toggleRow(this)'>
+										<td>11:15 - 11:30</br>
+										<td>Yuan Yin
+</a></strong></td>
+									<td>Accepted Paper Highlight</br>Pictura: Perspective View Self-Play at Scale for Driving</td>
+									<td class='expanded-row-content hide-row'>Self-play in simulation produces robust driving policies at scale. Demonstrations of such behavior have been made using *privileged* vectorized observations such as exact poses and velocities, even for occluded agents. This assumes that perception is solved and introduces a representation gap with the partial observation of a deployed agent driving from the perspective view of egocentric cameras. A common fix, distilling the privileged policy into a camera-input student, leaves the student imitating decisions its own view cannot justify. Instead, we establish perspective-view self-play as a practical training regime. We introduce *Pictura*, a GPU-accelerated multi-agent driving simulator that renders each agent's egocentric view at every step, mitigating the representation gap at its source. *Pictura* sustains up to 500K agent-steps/s (2M images/s) on a single H100. Using *Pictura*, we train *Alberti* by self-play with plain PPO. It is the first large-scale driving self-play policy trained directly from perspective images, without privileged observations. Training spans 50B agent steps for ~35M km of driving. It approaches the driving performance of its privileged vectorized counterpart, and transfers zero-shot to Waymo Open Motion Dataset layouts re-rendered in *Pictura*, where it outperforms privileged vectorized agents. Code will be made available.
 								</tr>
 								<tr onClick='toggleRow(this)'>
 									<td>11:30 - 12:00</br>
