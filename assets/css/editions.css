@@ -1,0 +1,52 @@
+/* Edition tabs: switch between workshop editions (ECCV 2026, CVPR 2027, ...) */
+
+	.edition-tabs {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5em;
+		margin: 1.5em 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.edition-tabs li {
+		padding: 0;
+	}
+
+	.edition-tabs a {
+		display: inline-block;
+		padding: 0.35em 1.1em;
+		border: solid 1px rgba(255, 255, 255, 0.35);
+		border-radius: 2em;
+		color: #fff;
+		font-size: 0.85em;
+		font-weight: 400;
+		letter-spacing: 0.05em;
+		text-decoration: none;
+		border-bottom: solid 1px rgba(255, 255, 255, 0.35);
+		transition: background-color 0.2s ease, border-color 0.2s ease;
+	}
+
+	.edition-tabs a:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+		border-color: rgba(255, 255, 255, 0.7);
+		color: #fff !important;
+	}
+
+	.edition-tabs a.current {
+		background-color: #fff;
+		border-color: #fff;
+		color: #636363;
+		font-weight: 600;
+	}
+
+	.edition-tabs a.current:hover {
+		color: #636363 !important;
+	}
+
+	.edition-tabs .tag {
+		margin-left: 0.4em;
+		font-size: 0.8em;
+		opacity: 0.75;
+	}
