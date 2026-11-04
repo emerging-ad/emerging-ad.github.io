@@ -1,0 +1,472 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>2nd Workshop on Emerging Behaviors in Physical AI for Achieving Robust Autonomy</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="stylesheet" href="../assets/css/editions.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+	<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <style>
+        .organizer-image {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            display: block;
+            border-radius: 4px;
+        }
+        .placeholder-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e6e9ef;
+            color: #a5acb8;
+            font-size: 3em;
+        }
+        .speaker-card, .organizer-card {
+            background: #fff;
+            border: 1px solid #e0e0e6;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+            text-align: center;
+            padding: 0.75em 0.75em 0;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .speaker-card:hover, .organizer-card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.13);
+            transform: translateY(-3px);
+        }
+        .speaker-card .image.fit,
+        .organizer-card .image.fit {
+            margin: 0;
+        }
+        .speaker-card .image.fit a,
+        .organizer-card .image.fit a {
+            display: block;
+        }
+        .speaker-card h5, .organizer-card h5 {
+            padding: 0.6em 0.5em 0.7em;
+            margin: 0;
+        }
+        #speakers .box.alt .row,
+        #organizers .box.alt .row {
+            justify-content: center;
+        }
+		#program .table-wrapper {
+			background: #fff;
+			padding-top: 1em;
+		}
+		.sponsor-logos {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1em;
+			list-style: none;
+			padding: 0;
+			max-width: 32em;
+			margin: 1.5em auto 0;
+		}
+		.sponsor-logos li {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 10em;
+			height: 6em;
+			padding: 1em 1.25em;
+			background: #fff;
+			border: 1px solid #e0e0e6;
+			border-radius: 8px;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+			box-sizing: border-box;
+		}
+		.sponsor-logos img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
+		#header.alt .logo.cvpr-logo img {
+			width: min(13rem, 60vw);
+			max-width: 100%;
+		}
+    </style>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Edition tabs -->
+		<ul class="edition-tabs" aria-label="Workshop editions">
+			<li><a href="index.html" class="current" aria-current="page">CVPR 2027<span class="tag">(proposed)</span></a></li>
+			<li><a href="../index.html">ECCV 2026</a></li>
+		</ul>
+
+		<!-- Header -->
+		<header id="header" class="alt">
+			<span class="logo cvpr-logo"><img src="../images/cvpr/Floating-Logo_Hero.svg" alt="CVPR 2027" /></span>
+			<h1>CVPR 2027 <br /> <strong>2nd Workshop on Emerging Behaviors in Physical AI for Achieving Robust Autonomy</strong></h1>
+			<p>Date TBA, Full Day<br>Room TBA<br>Seattle, WA, USA</p>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li><a href="#intro" class="active">About the workshop</a></li>
+				<li><a href="#speakers">Invited Speakers</a></li>
+				<li><a href="#program">Program</a></li>
+				<li><a href="#accepted_papers">Accepted Papers</a></li>
+				<li><a href="#call_for_papers">Call for papers</a></li>
+				<li><a href="#organizers">Organizers</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Introduction -->
+			<section id="intro" class="main">
+				<div class="spotlight">
+					<div class="content">
+						<header class="major special">
+							<h2>Abstract</h2>
+						</header>
+						<p>
+							Robust autonomous systems, spanning driving, navigation, and robotic manipulation, require intelligent, human-like, and safe decision making. While end-to-end models imitate expert data, (self-play) reinforcement learning (RL) enables diverse skill discovery and robust out-of-distribution performance without demonstrations.
+							This zero-shot behavior substrate is facilitated by GPU-accelerated multi-agent training at scale. Similarly, Vision-Language-Action models and World Models provide a complementary substrate of semantic understanding and predictive reasoning.
+							Despite shared methodologies, cross-domain synergies in emergent behavior learning remain under-explored. This workshop unites leading researchers to discuss core developments, bridge autonomous driving and robotics, and challenge fundamental assumptions on the path to robust, generalizable Physical AI.
+						</p>
+					</div>
+				</div>
+				<p style="margin-bottom: 0.5em"><strong>Topics of Interest:</strong></p>
+				<ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(14em, 1fr)); gap: 0.6em; list-style: none; padding: 0; margin: 0;">
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Behavior Learning</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">(Self-Play) Reinforcement Learning</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">End-to-End Autonomous Driving</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Robotics</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Generative Models</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">World Models</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Vision-Language-Action (VLA) Models</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Sim-to-Real Transfer</li>
+					<li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;">Simulation</li>
+				</ul>
+			</section>
+
+			<section id="speakers" class="main style1">
+				<div class="container">
+					<header class="major special">
+						<h2>Invited Speakers</h2>
+					</header>
+					<p style="text-align: center;">Preliminary list.</p>
+					<div class="box alt">
+						<div class="row gtr-uniform" style="margin-top: 1.5em;">
+							<div class="col-4">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://www.ias.informatik.tu-darmstadt.de/Member/JanPeters"><img class="organizer-image" src="../images/Speakers/jan_peters.png" alt="Jan Peters" /></a></span>
+									<h5><a href="https://www.ias.informatik.tu-darmstadt.de/Member/JanPeters"><strong>Jan Peters</strong></a><br/>TU Darmstadt</h5>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://amyzhang.github.io/"><img class="organizer-image" src="../images/Speakers/amy_zhang.png" alt="Amy Zhang" /></a></span>
+									<h5><a href="https://amyzhang.github.io/"><strong>Amy Zhang</strong></a><br/>University of Texas at Austin</h5>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://research.nvidia.com/labs/aspire/author/thomas-tian/"><img class="organizer-image" src="../images/Speakers/thomas_tian_v2.png" alt="Ran (Thomas) Tian" /></a></span>
+									<h5><a href="https://research.nvidia.com/labs/aspire/author/thomas-tian/"><strong>Ran (Thomas) Tian</strong></a><br/>NVIDIA</h5>
+								</div>
+							</div>
+						</div>
+						<div class="row gtr-uniform" style="margin-top: 1.5em;">
+							<div class="col-4">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://long.ooo/"><img class="organizer-image" src="../images/Speakers/long_chen.png" alt="Long Chen" /></a></span>
+									<h5><a href="https://long.ooo/"><strong>Long Chen</strong></a><br/>Xiaomi</h5>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://sites.google.com/view/danlevi/home?pli=1&amp;authuser=0"><img class="organizer-image" src="../images/Speakers/dan_levi.png" alt="Dan Levi" /></a></span>
+									<h5><a href="https://sites.google.com/view/danlevi/home?pli=1&amp;authuser=0"><strong>Dan Levi</strong></a><br/>General Motors</h5>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://abursuc.github.io/"><img class="organizer-image" src="../images/Speakers/andrei_bursuc.png" alt="Andrei Bursuc" /></a></span>
+									<h5><a href="https://abursuc.github.io/"><strong>Andrei Bursuc</strong></a><br/>Valeo.ai</h5>
+								</div>
+							</div>
+						</div>
+						<div class="row gtr-uniform" style="margin-top: 1.5em;">
+							<div class="col-4">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://rowanmcallister.github.io/"><img class="organizer-image" src="../images/Speakers/rowan_mcallister.jpg" alt="Rowan McAllister" /></a></span>
+									<h5><a href="https://rowanmcallister.github.io/"><strong>Rowan McAllister</strong></a><br/>Toyota Research Institute</h5>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://www.linkedin.com/in/pengsu8/?locale=zh-cn"><img class="organizer-image" src="../images/Speakers/peng_su_cropped.jpg" alt="Peng Su" /></a></span>
+									<h5><a href="https://www.linkedin.com/in/pengsu8/?locale=zh-cn"><strong>Peng Su</strong></a><br/>Yinwang</h5>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="speaker-card">
+									<span class="image fit"><a href="https://negarmehr.com/"><img class="organizer-image" src="../images/Speakers/negar_mehr.png" alt="Negar Mehr" /></a></span>
+									<h5><a href="https://negarmehr.com/"><strong>Negar Mehr</strong></a><br/>University of California Berkeley</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="program" class="main style1">
+				<div class="container">
+					<header class="major special">
+						<h2>Program</h2>
+					</header>
+					<p style="text-align: center;">Proposed full-day program, subject to change.</p>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Time</th>
+									<th>Speaker</th>
+									<th>Topic</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>09:00 - 09:15</td>
+									<td>Organizers</td>
+									<td>Welcome and Introduction</td>
+								</tr>
+								<tr>
+									<td>09:15 - 09:45</td>
+									<td><strong><a href="https://www.ias.informatik.tu-darmstadt.de/Member/JanPeters">Prof. Jan Peters</a></strong>, TU Darmstadt</td>
+									<td>Talk title TBA</td>
+								</tr>
+								<tr>
+									<td>09:45 - 10:15</td>
+									<td><strong><a href="https://amyzhang.github.io/">Prof. Amy Zhang</a></strong>, University of Texas at Austin</td>
+									<td>Talk title TBA</td>
+								</tr>
+								<tr>
+									<td>10:15 - 10:45</td>
+									<td>Coffee Break</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>10:45 - 11:15</td>
+									<td><strong><a href="https://negarmehr.com/">Prof. Negar Mehr</a></strong>, University of California Berkeley</td>
+									<td>Talk title TBA</td>
+								</tr>
+								<tr>
+									<td>11:15 - 11:45</td>
+									<td>PhD Students Session</td>
+									<td>Two 15-minute talks</td>
+								</tr>
+								<tr>
+									<td>11:45 - 12:15</td>
+									<td><strong><a href="https://rowanmcallister.github.io/">Rowan McAllister</a></strong>, Toyota Research Institute</td>
+									<td>Talk title TBA</td>
+								</tr>
+								<tr>
+									<td>12:15 - 13:15</td>
+									<td>Lunch</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>13:15 - 14:15</td>
+									<td>Poster Session</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>14:15 - 14:45</td>
+									<td><strong><a href="https://abursuc.github.io/">Andrei Bursuc</a></strong>, Valeo.ai</td>
+									<td>Talk title TBA</td>
+								</tr>
+								<tr>
+									<td>14:45 - 15:15</td>
+									<td><strong><a href="https://sites.google.com/view/danlevi/home?pli=1&amp;authuser=0">Dan Levi</a></strong>, General Motors</td>
+									<td>Talk title TBA</td>
+								</tr>
+								<tr>
+									<td>15:15 - 15:45</td>
+									<td>Coffee Break</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>15:45 - 16:15</td>
+									<td><strong><a href="https://www.linkedin.com/in/pengsu8/?locale=zh-cn">Peng Su</a></strong>, Yinwang</td>
+									<td>Talk title TBA</td>
+								</tr>
+								<tr>
+									<td>16:15 - 16:45</td>
+									<td><strong><a href="https://research.nvidia.com/labs/aspire/author/thomas-tian/">Ran (Thomas) Tian</a></strong>, NVIDIA</td>
+									<td>Talk title TBA</td>
+								</tr>
+								<tr>
+									<td>16:45 - 17:15</td>
+									<td><strong><a href="https://long.ooo/">Long Chen</a></strong>, Xiaomi</td>
+									<td>Talk title TBA</td>
+								</tr>
+								<tr>
+									<td>17:15 - 17:30</td>
+									<td>Organizers</td>
+									<td>Closing Remarks</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+
+			<section id="accepted_papers" class="main style1">
+				<div class="container">
+					<header class="major special">
+						<h2>Accepted Papers</h2>
+					</header>
+					<p style="text-align: center;">To be announced after author notification.</p>
+				</div>
+			</section>
+
+			<section id="call_for_papers" class="main">
+			<div class="content">
+                    <header class="major special">
+                        <h2>Call for Papers</h2>
+                    </header>
+                    <p>
+                        All workshop contributions will be <strong>peer-reviewed</strong> by at least two expert reviewers.
+                        Accepted papers will be presented in a dedicated poster session.
+                    </p>
+                    <p style="margin-bottom: 0.5em"><strong>Submission Details (preliminary):</strong></p>
+                    <ul style="display: grid; grid-template-columns: 1fr; gap: 0.6em; list-style: none; padding: 0; margin: 0 0 1em;">
+                        <li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;"><strong>Submission portal:</strong> TBA</li>
+                        <li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;"><strong>Submission deadline:</strong> TBA</li>
+                        <li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;"><strong>Notification of acceptance:</strong> TBA</li>
+                        <li style="background: #f4f6f9; border: 1px solid #dde2ea; border-radius: 6px; padding: 0.55em 0.85em;"><strong>Camera-ready deadline:</strong> TBA</li>
+                    </ul>
+                </div>
+			</section>
+
+			<section id="organizers" class="main style1">
+				<div class="container">
+					<header class="major special">
+						<h2>Organizers</h2>
+					</header>
+					<div class="box alt">
+						<div class="row gtr-uniform" style="margin-top: 1.5em;">
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><img class="organizer-image" src="../images/Organizers/faris_janjos.jpeg" alt="Faris Janjoš" /></span>
+									<h5><strong>Faris Janjoš</strong><br/>Bosch Center for AI</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://look-andreas.github.io/"><img class="organizer-image" src="../images/Organizers/look_andreas_cropped.png" alt="Andreas Look" /></a></span>
+									<h5><a href="https://look-andreas.github.io/"><strong>Andreas Look</strong></a><br/>University of Applied Sciences Coburg</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><img class="organizer-image" src="../images/Organizers/max_naumann.jpg" alt="Maximilian Naumann" /></span>
+									<h5><strong>Maximilian Naumann</strong><br/>Zoox</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://www.borisivanovic.com/"><img class="organizer-image" src="../images/Organizers/boris_ivanovic.jpg" alt="Boris Ivanovic" /></a></span>
+									<h5><a href="https://www.borisivanovic.com/"><strong>Boris Ivanovic</strong></a><br/>NVIDIA Research</h5>
+								</div>
+							</div>
+						</div>
+						<div class="row gtr-uniform" style="margin-top: 1.5em;">
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://ariostgx.github.io/website/"><img class="organizer-image" src="../images/Organizers/shuhan_tan.jpg" alt="Shuhan Tan" /></a></span>
+									<h5><a href="https://ariostgx.github.io/website/"><strong>Shuhan Tan</strong></a><br/>NVIDIA Research</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><img class="organizer-image" src="../images/Organizers/mozhgan_pourk.png" alt="Mozhgan Pourkeshavarz" /></span>
+									<h5><strong>Mozhgan Pourkeshavarz</strong><br/>University of Toronto</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://www.eugenevinitsky.com/"><img class="organizer-image" src="../images/Speakers/eugene_vinitsky.jpg" alt="Eugene Vinitsky" /></a></span>
+									<h5><a href="https://www.eugenevinitsky.com/"><strong>Eugene Vinitsky</strong></a><br/>New York University</h5>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="organizer-card">
+									<span class="image fit"><a href="https://palmieri.github.io/"><img class="organizer-image" src="../images/Organizers/palmieri_luigi.png" alt="Luigi Palmieri" /></a></span>
+									<h5><a href="https://palmieri.github.io/"><strong>Luigi Palmieri</strong></a><br/>Bosch Center for AI</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					</br>
+					<header class="major special">
+						<h2>Supported by</h2>
+					</header>
+					<ul class="sponsor-logos">
+						<li><img src="../images/Affiliations/BoschLogo_cropped.jpg" alt="Bosch" /></li>
+						<li><img src="../images/Affiliations/NVIDIA.png" alt="NVIDIA" /></li>
+						<li><img src="../images/Affiliations/coburg.png" alt="Coburg University" /></li>
+						<li><img src="../images/Affiliations/nyu.png" alt="New York University" /></li>
+						<li><img src="../images/Affiliations/toronto.png" alt="University of Toronto" /></li>
+						<li><img src="../images/Affiliations/Zoox_logo_2021.png" alt="Zoox" /></li>
+					</ul>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<section>
+				<h2>Get in touch</h2>
+				<p>
+				Feel free to send us an
+				<a href="mailto:faris.janjos@bosch.com,ev2237@nyu.edu?subject=EmergingAD%20CVPR%202027" target="_top">e-mail</a> if you have any questions regarding this workshop.
+				</p>
+			</section>
+			<p class="copyright">&copy; Faris Janjos, Andreas Look, Luigi Palmieri. All rights reserved. Design: <a
+					href="https://html5up.net">HTML5 UP</a>.</p>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
